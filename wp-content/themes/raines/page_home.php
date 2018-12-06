@@ -54,11 +54,13 @@ function home__featured_article() {
 }
 
 function home__recent_articles() {
-
+    $content = get_field('recent_articles');
+	recent_articles( $content );
 }
 
 function home__link_block_inner() {
-
+    $content = get_field('link_block_inner');
+    link_block_inner( $content );
 }
 
 function home__content_block_2() {
@@ -66,7 +68,7 @@ function home__content_block_2() {
 	content_block( $content );
 }
 
-// Next steps: add featured post/sidebar, add categories, add blue links
+// Next steps: add widgetized area to recent_articles.php, add link block sections
 
 
 

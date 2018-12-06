@@ -1,20 +1,21 @@
 // Base Colors
 //===================
 $white: #fff;
-$black: #000;
+$black: #333;
 $red: #c3251d;
 $gray--lightest: #ccc;
 $gray--lighter: #eee;
 $gray--light: #ddd;
 $gray--medium: #777;
 $gray: #333;
+$blue-gradient: linear-gradient( 180deg, #3D749B, #1F3A4E);
 
 //
 // Color Configuration
 //===========================
 
-$link--color: $red;
-$link--hover-color: $gray;
+$link--color: $black;
+$link--hover-color: $black;
 
 // Elements
 $base__color: $gray;
@@ -31,6 +32,8 @@ $button--hover-background-color: $red;
 $button--hover-color: $white;
 $button--disabled-background-color: $gray--lighter;
 $button--disable-color: $gray--medium;
+$button--primary--background: $blue-gradient;
+$button--secondary--background: transparent;
 
 //
 // Header
@@ -41,8 +44,8 @@ $site-title--link-color: $gray;
 //
 // Navigation
 //============================
-$nav--link-color: $gray;
-$nav--hover-color: $red;
+$nav--link-color: $black;
+$nav--hover-color: $black;
 $submenu--border-color: $gray--lighter;
 $submenu--link-background-color: $white;
 

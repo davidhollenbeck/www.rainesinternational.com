@@ -5,9 +5,10 @@
 .genesis-nav-menu {
   clear: both;
   @include rem( font-size, $nav--font-size );
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1;
   width: 100%;
+  font-family: $font-family--lato;
 
   @media only screen and (max-width: 1023px) {
     text-align: center;
@@ -85,5 +86,11 @@
 
   > .right {
     float: right;
+  }
+
+  @media only screen and (max-width:1200px) {
+    a {
+      padding:32px 10px;
+    }
   }
 }

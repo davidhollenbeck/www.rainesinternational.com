@@ -15,12 +15,13 @@
     background-size: contain !important;
     float: left;
     min-height: $site-title--min-height;
-    width: 100%;
+    width: 180px;
   }
 
   .site-description,
   .site-title {
     display: block;
     text-indent: -9999px;
+    margin-left:50px;
   }
 }

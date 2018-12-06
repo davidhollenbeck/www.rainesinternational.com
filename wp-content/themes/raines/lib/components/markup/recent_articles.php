@@ -12,10 +12,32 @@
 
 namespace Ucoast\Raines;
 
-function home__load_recent_articles() {
-	genesis_widget_area( 'after-post', array(
-		'before' => '<div class="after-post widget-area">',
-		'after' => '</div>',
-	) );
+function recent_articles($group) {
+	$args = array(
+		'cat' => $group['category'],
+		'posts_per_page' => $group['posts_per_page']
+	);
+	// The Query
+	$the_query = new \WP_Query( $args );
+
+	// The Loop
+		if ( $the_query->have_posts() ) {
+			echo '<div class="recent-articles"><p class="recent-articles__headline">' . $group['headline'] . '</p><ul>';
+			while ( $the_query->have_posts() ) {
+				$the_query->the_post();
+				echo
+					'<li>
+						<h3 class="recent-articles__post-title">' . get_the_title() . '</h3>
+						<p class="recent-articles__post-excerpt">' . get_the_excerpt() .'</p>
+						<a class="button button--primary" href="' . get_the_permalink() . '">Read More</a>
+					</li>';
+			}
+			echo '</ul></div>';
+			/* Restore original Post Data */
+			wp_reset_postdata();
+		} else {
+			// no posts found
+		}
 }
+
 

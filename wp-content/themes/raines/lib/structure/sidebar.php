@@ -18,11 +18,3 @@ namespace Ucoast\Raines;
  * @return void
  */
 
-function register_sidebars() {
-	genesis_register_sidebar( array(
-		'id'            => 'raines-home',
-		'name'          => __( 'After Post', 'raines' ),
-		'description'   => __( 'This is a widget area that can be placed after the post', 'raines' ),
-	) );
-}
-

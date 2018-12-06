@@ -72,16 +72,20 @@ function render_content_image_right($group) {
 
 function render_content_image_background($group) {
 	?>
-	<div class="row content-block_inner-text content-block__inner-text--image-background" style="background-image:url('<?php echo $group['image']; ?>');">
-		<?php load_content_copy($group); ?>
+	<div class="row content-block content-block--image-background" style="background-image:url('<?php echo $group['image']; ?>');">
+        <div class="content-block__inner-text">
+		    <?php load_content_copy($group); ?>
+        </div>
 	</div>
 	<?php
 }
 
 function render_content_image_corner($group) {
 	?>
-	<div class="row content-block content-block__inner-text--image-corner" style="background-image:url('<?php echo $group['image']; ?>');">
-		<?php load_content_copy($group); ?>
+	<div class="row content-block content-block--image-corner" style="background-image:url('<?php echo $group['image']; ?>');">
+        <div class="content-block__inner-text">
+		    <?php load_content_copy($group); ?>
+        </div>
 	</div>
 	<div class="row content-block__corner-overlay"></div>
 	<?php

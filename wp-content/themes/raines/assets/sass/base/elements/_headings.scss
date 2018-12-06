@@ -8,17 +8,21 @@ h4,
 h5,
 h6 {
   font-family: $headings--font-family;
-  font-weight: 600;
+  font-weight: 100;
   line-height: $headings--line-height;
   margin: 0 0 10px;
 }
 
 h1 {
   @include rem( font-size, $h1--font-size );
+  color:$white;
+  text-shadow:$base--text-shadow;
+  margin:0 0 1em;
 }
 
 h2 {
   @include rem( font-size, $h2--font-size );
+  font-weight:400;
 }
 
 h3 {
@@ -35,4 +39,25 @@ h5 {
 
 h6 {
   @include rem( font-size, $h6--font-size );
+}
+
+// Class-based headings
+
+.subheadline {
+  color:$white;
+  text-shadow:$base--text-shadow;
+  line-height:$headings--line-height;
+  margin:0 0 3em;
+}
+
+// Media Queries
+
+@media screen and (max-width:$screen-size--larger) {
+  h1 {
+    @include rem( font-size, 40px );
+  }
+
+  .subheadline {
+    @include rem( font-size, 18px );
+  }
 }
