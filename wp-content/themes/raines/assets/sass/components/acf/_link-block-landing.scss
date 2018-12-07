@@ -1,0 +1,56 @@
+/* ## Link Block Landing
+--------------------------------------------- */
+
+.link-block-landing {
+  display:block;
+
+  .link-block-landing__block--2 {
+    margin-left:0;
+    clear:both;
+  }
+
+  .link-block-landing__headline {
+    color:#fff;
+    font-family:$font-family--lato;
+    font-size:$h3--font-size;
+    font-weight:400;
+    margin:0;
+    padding:20px 25px;
+    display:inline-block;
+  }
+
+  .link-block-landing__block {
+    position: relative;
+    margin-bottom:2.564102564102564%;
+    display:block;
+  }
+
+  .link-block-landing__block img {
+    display:block;
+  }
+
+  .link-block-landing__block div {
+    background:linear-gradient(180deg, rgba(61,116,155, 0.9), rgba(31, 58, 78, 0.9));
+    position:absolute;
+    width:100%;
+    bottom:0;
+  }
+
+  .button--secondary {
+    position:absolute;
+    right:25px;
+    top:10px
+  }
+
+  @media screen and (max-width: $screen-size--large){
+    .link-block-landing__block .button--secondary {
+       display:none;
+    }
+  }
+
+  @media screen and (max-width: $screen-size--small) {
+    .link-block-landing__block {
+      margin-bottom: 40px;
+    }
+  }
+}

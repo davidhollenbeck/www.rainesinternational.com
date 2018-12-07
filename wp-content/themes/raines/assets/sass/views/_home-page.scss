@@ -1,0 +1,17 @@
+/* ## Home Page CSS
+--------------------------------------------- */
+
+.home-page__flexbox {
+
+
+  @media screen and (max-width: $screen-size--medium) {
+    .one-fourth, .three-fourths {
+      width:100%;
+      margin-left:0;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint__screen-size--small) {
+
+  }
+}

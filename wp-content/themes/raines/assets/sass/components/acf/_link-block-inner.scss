@@ -36,4 +36,29 @@
       margin-bottom:0;
     }
   }
+
+  @media screen and (max-width: $screen-size--medium) {
+    .link-block-inner__block {
+      width:48.717948717948715%;
+      margin-left:2.564102564102564%;
+
+      &.link-block-inner__block--3 {
+        clear:none;
+        margin-left:2.564102564102564%;
+      }
+
+      &:nth-child(odd) {
+        margin-left:0;
+        clear:both;
+      }
+    }
+  }
+
+  @media screen and (max-width: $screen-size--smallish) {
+    .link-block-inner__block {
+      width:100%;
+      margin-left:0;
+      float:none;
+    }
+  }
 }

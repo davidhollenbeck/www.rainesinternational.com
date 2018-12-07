@@ -107,4 +107,18 @@
       }
     }
   }
+
+  @media screen and (max-width: $screen-size--medium) {
+    .slide {
+      .slide__text-container {
+        width:100%;
+        left:0;
+      }
+    }
+
+    .slider__navigation {
+      width:100%;
+      left:0;
+    }
+  }
 }

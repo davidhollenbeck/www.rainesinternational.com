@@ -61,13 +61,14 @@ function render_content_image_left($group) {
 
 function render_content_image_right($group) {
 	?>
-	<div class="row content-block content-block--image-right">
-		<div class="content-block__inner one-half first">
+	<div class="row row--padding content-block content-block--image-right">
+		<div class="one-half first">
 			<?php load_content_copy($group); ?>
 		</div>
-        <div class="content-block__inner one-half">
+        <div class="one-half">
 	        <?php load_content_image($group); ?>
         </div>
+        <div class="clearfix"></div>
 	</div>
 	<?php
 }

@@ -20,10 +20,6 @@
 .site-inner {
   clear: both;
   word-wrap: break-word;
-
-   @include media( $breakpoint__screen-size--small ) {
-    padding: 5% 5% 0;
-  }
 }
 
  @include media( $breakpoint__screen-size--small ) {
@@ -43,7 +39,15 @@
   margin-right:auto;
   background-color:#fff;
   display:flex;
+  flex-wrap:wrap;
 }
 .row--padding {
-  padding:100px;
+  padding:60px;
+  max-width: 1340px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row--border-top {
+  border-top:1px solid $blue;
 }

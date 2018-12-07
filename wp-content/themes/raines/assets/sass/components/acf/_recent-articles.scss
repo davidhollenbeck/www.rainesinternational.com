@@ -3,6 +3,7 @@
 .recent-articles {
   li {
     margin-bottom:80px;
+    max-width:600px;
   }
 
   .recent-articles__headline {
@@ -32,6 +33,10 @@
     border-bottom: 1px solid #89B7D7;
     margin-bottom: 1em;
     width:90%;
+
+    @media screen and (max-width: $screen-size--smallish) {
+      width:100%;
+    }
   }
 
   .recent-articles__post-excerpt {
