@@ -1,6 +1,5 @@
 /* ## Site Containers
 --------------------------------------------- */
-
 .site-inner,
 .wrap {
   margin: 0 auto;
@@ -36,4 +35,15 @@
 
 .landing-page .site-inner {
   max-width: $max-width__landing-page;
+}
+
+.row {
+  max-width:1800px;
+  margin-left:auto;
+  margin-right:auto;
+  background-color:#fff;
+  display:flex;
+}
+.row--padding {
+  padding:100px;
 }

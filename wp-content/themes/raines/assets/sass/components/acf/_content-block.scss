@@ -1,0 +1,66 @@
+/* ## Content Block
+--------------------------------------------- */
+
+.content-block {
+  background-size:cover;
+  position:relative;
+  background-color:$gray--lightest;
+
+  .content-block__inner {
+    padding:60px 100px;
+    position:relative;
+  }
+
+  &.content-block--image-right {
+    display:block;
+  }
+
+  &.content-block--image-corner {
+
+    .block-background {
+      background-color:$gray--lightest;
+      position:absolute;
+      width:50%;
+      height:100%;
+      left:0;
+      top:0;
+
+    }
+    .corner-background, .corner-overlay {
+      position:absolute;
+      width:50%;
+      height:100%;
+      top:0;
+      left:50%;
+    }
+
+    .corner-image {
+      position:absolute;
+      width:50%;
+      height:100%;
+      top:0;
+      left:50%;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position:right;
+
+    }
+
+    .corner-background {
+      background: linear-gradient(to top left, transparent 50%, $gray--lightest 50%);
+    }
+
+    .corner-overlay {
+      background:$blue-gradient;
+      opacity:.66;
+    }
+
+    .content-block__inner {
+      max-width:1100px;
+
+      p {
+        max-width:680px;
+      }
+    }
+  }
+}

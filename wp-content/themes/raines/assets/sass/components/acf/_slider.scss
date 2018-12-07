@@ -3,6 +3,7 @@
 
 .slider {
   height:calc( 100vh - 91px);
+  max-height:1600px;
   position:relative;
 
   .slide {
@@ -20,7 +21,7 @@
 
       .wrap {
         padding: 80px;
-        max-width: 680px;
+        max-width: 720px;
         margin-left: auto;
         margin-right: auto;
         position: relative;

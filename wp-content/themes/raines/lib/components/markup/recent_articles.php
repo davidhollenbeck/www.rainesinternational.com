@@ -27,6 +27,7 @@ function recent_articles($group) {
 				$the_query->the_post();
 				echo
 					'<li>
+						<p class="post-date">' . get_the_date() . '</p>
 						<h3 class="recent-articles__post-title">' . get_the_title() . '</h3>
 						<p class="recent-articles__post-excerpt">' . get_the_excerpt() .'</p>
 						<a class="button button--primary" href="' . get_the_permalink() . '">Read More</a>

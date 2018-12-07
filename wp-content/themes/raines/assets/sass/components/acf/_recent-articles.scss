@@ -1,0 +1,43 @@
+/* ## Recent Articles
+--------------------------------------------- */
+.recent-articles {
+  li {
+    margin-bottom:80px;
+  }
+
+  .recent-articles__headline {
+    font-family:$font-family--lato;
+    @include rem( font-size, $h3--font-size );
+    color:$blue;
+    font-weight:400;
+
+    &:before {
+      content:"::";
+    }
+  }
+
+  .post-date {
+    font-size:12px;
+    font-family:$font-family--roboto;
+    color:#000000;
+    margin-bottom:1em;
+    text-transform:uppercase;
+  }
+
+  .recent-articles__post-title {
+    font-family:$font-family--lato;
+    font-size:22px;
+    font-weight:400;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #89B7D7;
+    margin-bottom: 1em;
+    width:90%;
+  }
+
+  .recent-articles__post-excerpt {
+    line-height:1.5;
+    @include rem( font-size, $h5--font-size );
+    font-family:$font-family--lato;
+    margin:0 0 1em;
+  }
+}

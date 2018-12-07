@@ -41,7 +41,7 @@ function content_block( $group ) {
 function render_content_image_none($group) {
 	?>
 		<div class="row content-block content-block--image-none">
-			<div class="content-block__inner-text">
+			<div class="content-block__inner">
 				<?php load_content_copy($group); ?>
 			</div>
 		</div>
@@ -52,7 +52,7 @@ function render_content_image_left($group) {
 	?>
 	<div class="row content-block content-block--image-left">
 		<?php load_content_image($group); ?>
-		<div class="content-block__inner-text">
+		<div class="content-block__inner">
 			<?php load_content_copy($group); ?>
 		</div>
 	</div>
@@ -62,10 +62,12 @@ function render_content_image_left($group) {
 function render_content_image_right($group) {
 	?>
 	<div class="row content-block content-block--image-right">
-		<div class="content-block__inner-text">
+		<div class="content-block__inner one-half first">
 			<?php load_content_copy($group); ?>
 		</div>
-		<?php load_content_image($group); ?>
+        <div class="content-block__inner one-half">
+	        <?php load_content_image($group); ?>
+        </div>
 	</div>
 	<?php
 }
@@ -73,7 +75,7 @@ function render_content_image_right($group) {
 function render_content_image_background($group) {
 	?>
 	<div class="row content-block content-block--image-background" style="background-image:url('<?php echo $group['image']; ?>');">
-        <div class="content-block__inner-text">
+        <div class="content-block__inner">
 		    <?php load_content_copy($group); ?>
         </div>
 	</div>
@@ -82,12 +84,17 @@ function render_content_image_background($group) {
 
 function render_content_image_corner($group) {
 	?>
-	<div class="row content-block content-block--image-corner" style="background-image:url('<?php echo $group['image']; ?>');">
-        <div class="content-block__inner-text">
+	<div class="row content-block content-block--image-corner">
+        <div class="block-background"></div>
+        <div class="corner-image" style="background-image:url('<?php echo $group['image']; ?>');"></div>
+        <div class="corner-overlay"></div>
+        <div class="corner-background"></div>
+        <div class="content-block__inner">
 		    <?php load_content_copy($group); ?>
         </div>
+
 	</div>
-	<div class="row content-block__corner-overlay"></div>
+
 	<?php
 }
 

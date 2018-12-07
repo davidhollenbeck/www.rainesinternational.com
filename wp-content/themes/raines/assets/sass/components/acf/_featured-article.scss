@@ -1,0 +1,17 @@
+/* ## Featured Article
+--------------------------------------------- */
+.featured-article {
+  position:relative;
+  background-size:cover;
+
+  .featured-article__text-container {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.37);
+
+    .wrap {
+      padding: 140px 80px;
+      max-width:650px;
+      margin-left:0;
+    }
+  }
+}

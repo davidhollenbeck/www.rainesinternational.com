@@ -22,9 +22,8 @@ function load_home_page() {
 
 	home__do_slider();
 	home__content_block_1();
-	home__content_block_2();
 	?>
-		<div class="row">
+		<div class="row row--padding">
 			<div class="first one-fourth">
 				<?php home__recent_articles(); ?>
 			</div>
@@ -34,8 +33,10 @@ function load_home_page() {
 					home__link_block_inner();
 				?>
 			</div>
+            <div class="clearfix"></div>
 		</div>
 	<?php
+	home__content_block_2();
 }
 
 function home__do_slider() {

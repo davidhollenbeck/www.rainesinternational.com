@@ -1,0 +1,39 @@
+/* ## Link Block Inner
+--------------------------------------------- */
+
+.link-block-inner {
+  margin-top:40px;
+
+  .one-third.link-block-inner__block--3 {
+    margin-left:0;
+    clear:both;
+  }
+
+  .link-block-inner__headline {
+    color:#333;
+    font-family:$font-family--lato;
+    font-size:$h3--font-size;
+    font-weight:400;
+    margin-top:1em;
+  }
+
+  .link-block-inner__subheadline {
+    line-height:1.5;
+    @include rem( font-size, $h5--font-size );
+    font-family:$font-family--lato;
+    margin:0 0 2em;
+  }
+
+  a {
+    text-decoration:none;
+    transition:500ms all;
+    padding:15px 0;
+    margin-bottom:15px;
+
+    &:hover {
+      background-color:$gray--lighter;
+      padding: 15px;
+      margin-bottom:0;
+    }
+  }
+}
