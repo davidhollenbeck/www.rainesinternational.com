@@ -20,7 +20,7 @@
     .block-background {
       background-color:$gray--lightest;
       position:absolute;
-      width:50%;
+      width:calc(50% + 1px);
       height:100%;
       left:0;
       top:0;
@@ -60,6 +60,40 @@
 
       p {
         max-width:680px;
+      }
+    }
+  }
+
+  @media screen and (max-width:$screen-size--large) {
+    &.content-block--image-corner .corner-background {
+      background: linear-gradient(to top left, transparent 40%, $gray--lightest 40%);
+    }
+  }
+
+  @media screen and (max-width:$screen-size--medium) {
+    &.content-block--image-corner {
+      .corner-background {
+        background: $gray--lightest;
+      }
+
+      .corner-image {
+        background-image:none !important;
+      }
+
+      .corner-overlay {
+        display:none;
+      }
+    }
+
+    .content-block__inner {
+      padding:60px;
+    }
+  }
+
+  @media screen and (max-width:$screen-size--small) {
+    &.content-block--image-right {
+      img {
+        margin-top:60px;
       }
     }
   }

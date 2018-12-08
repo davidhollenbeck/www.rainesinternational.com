@@ -86,9 +86,9 @@ function render_content_image_background($group) {
 function render_content_image_corner($group) {
 	?>
 	<div class="row content-block content-block--image-corner">
-        <div class="block-background"></div>
         <div class="corner-image" style="background-image:url('<?php echo $group['image']; ?>');"></div>
         <div class="corner-overlay"></div>
+        <div class="block-background"></div>
         <div class="corner-background"></div>
         <div class="content-block__inner">
 		    <?php load_content_copy($group); ?>

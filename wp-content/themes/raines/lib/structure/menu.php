@@ -47,3 +47,31 @@ function setup_secondary_menu_args( array $args ) {
 
 	return $args;
 }
+
+/**
+ * Register Footer functions
+ *
+ * @since 1.0.0
+ *
+ * @param
+ *
+ * @return
+ */
+
+function register_additional_menus() {
+
+	register_nav_menu( 'footer-menu-1' ,__( 'Footer Menu 1' ));
+	register_nav_menu( 'footer-menu-2' ,__( 'Footer Menu 2' ));
+
+}
+
+add_action( 'init', __NAMESPACE__ . '\register_additional_menus' );
+
+
+function footer_nav_1() {
+	wp_nav_menu( array( 'theme_location' => 'footer-menu-1', 'container_class' => 'genesis-nav-menu' ) );
+}
+
+function footer_nav_2() {
+	wp_nav_menu( array( 'theme_location' => 'footer-menu-2', 'container_class' => 'genesis-nav-menu' ) );
+}
