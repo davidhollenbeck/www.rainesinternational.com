@@ -27,6 +27,12 @@ function enqueue_assets() {
 
 	wp_enqueue_script( CHILD_TEXT_DOMAIN . '-responsive-menu', CHILD_URL . '/assets/js/responsive-menu.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 
+	wp_enqueue_script( CHILD_TEXT_DOMAIN . '-slider', CHILD_URL . '/assets/js/slider.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_enqueue_script( CHILD_TEXT_DOMAIN . '-slick', CHILD_URL . '/assets/js/slick.min.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+
+	wp_enqueue_script( CHILD_TEXT_DOMAIN . '-drawer-lib', CHILD_URL . '/assets/js/jquery.multilevelpushmenu.min.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_enqueue_script( CHILD_TEXT_DOMAIN . '-drawer', CHILD_URL . '/assets/js/drawer.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+
 	$localized_script_args = array(
 		'mainMenu' => __( 'Menu', CHILD_TEXT_DOMAIN ),
 		'subMenu'  => __( 'Menu', CHILD_TEXT_DOMAIN ),

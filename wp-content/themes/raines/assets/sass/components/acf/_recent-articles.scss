@@ -40,9 +40,17 @@
   }
 
   .recent-articles__post-excerpt {
-    line-height:1.5;
-    @include rem( font-size, $h5--font-size );
-    font-family:$font-family--lato;
-    margin:0 0 1em;
+    @media screen and (min-width:$screen-size--medium--up) {
+      line-height:1.5;
+      @include rem( font-size, $h5--font-size );
+      font-family:$font-family--lato;
+      margin:0 0 1em;
+    }
+  }
+
+  @media screen and (max-width:$screen-size--small) {
+    .recent-articles__headline {
+      @include rem( font-size, 20px );
+    }
   }
 }

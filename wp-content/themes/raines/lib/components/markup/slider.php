@@ -15,15 +15,15 @@ namespace Ucoast\Raines;
 function slider( $slides ) {
    ?>
       <div class="slider">
+          <div class="slider__navigation">
+              <div class="slider__navigation__button slider__navigation__button--prev"><img src="/wp-content/themes/<?php echo CHILD_TEXT_DOMAIN; ?>/assets/images/caret-rev.png" /></div>
+              <div class="slider__navigation__button slider__navigation__button--next"><img src="/wp-content/themes/<?php echo CHILD_TEXT_DOMAIN; ?>/assets/images/caret.png" /></div>
+          </div>
 	      <?php
 				foreach ( $slides as $i=>$slide ) {
 					render_slide( $slide, $i, count($slides) );
 				}
 	      ?>
-          <div class="slider__navigation">
-              <div class="slider__navigation__button slider__navigation__button--prev"><img src="/wp-content/themes/<?php echo CHILD_TEXT_DOMAIN; ?>/assets/images/caret-rev.png" /></div>
-              <div class="slider__navigation__button slider__navigation__button--next"><img src="/wp-content/themes/<?php echo CHILD_TEXT_DOMAIN; ?>/assets/images/caret.png" /></div>
-          </div>
       </div>
   <?php
 }

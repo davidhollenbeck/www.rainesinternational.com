@@ -27,13 +27,20 @@
   a {
     text-decoration:none;
     transition:500ms all;
-    padding:15px 0;
     margin-bottom:15px;
+
+    p, img, h4 {
+      transition:500ms all;
+    }
 
     &:hover {
       background-color:$gray--lighter;
-      padding: 15px;
-      margin-bottom:0;
+
+
+      p, img, h4 {
+        transition:500ms all;
+        transform: scale(.9);
+      }
     }
   }
 

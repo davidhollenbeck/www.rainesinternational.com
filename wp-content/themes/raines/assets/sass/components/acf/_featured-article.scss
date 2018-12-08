@@ -12,6 +12,10 @@
       padding: 140px 80px;
       max-width:650px;
       margin-left:0;
+
+      @include media( $breakpoint__screen-size--small ) {
+        padding:140px 30px;
+      }
     }
   }
 }

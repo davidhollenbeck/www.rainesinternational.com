@@ -28,6 +28,10 @@ a {
 p {
   margin: 0 0 3em;
   padding: 0;
+
+  @include media( $breakpoint__screen-size--medium ) {
+    margin:0 0 2em;
+  }
 }
 
 hr {

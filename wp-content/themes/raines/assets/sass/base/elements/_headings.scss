@@ -8,7 +8,7 @@ h4,
 h5,
 h6 {
   font-family: $headings--font-family;
-  font-weight: 100;
+  font-weight: 300;
   line-height: $headings--line-height;
   margin: 0 0 10px;
 }
@@ -60,5 +60,19 @@ h6 {
 
   .subheadline {
     @include rem( font-size, 18px );
+  }
+}
+
+@media screen and (max-width:$screen-size--small) {
+  h1 {
+    @include rem( font-size, 32px );
+  }
+
+  h2 {
+    @include rem( font-size, 28px );
+  }
+
+  .subheadline {
+    @include rem( font-size, 16px );
   }
 }
