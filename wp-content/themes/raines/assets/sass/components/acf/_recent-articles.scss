@@ -10,7 +10,7 @@
     font-family:$font-family--lato;
     @include rem( font-size, $h3--font-size );
     color:$blue;
-    font-weight:400;
+    margin-bottom:2em;
 
     &:before {
       content:"::";

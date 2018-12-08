@@ -62,6 +62,7 @@ function register_additional_menus() {
 
 	register_nav_menu( 'footer-menu-1' ,__( 'Footer Menu 1' ));
 	register_nav_menu( 'footer-menu-2' ,__( 'Footer Menu 2' ));
+	register_nav_menu( 'drawer-navigation' ,__( 'Drawer Menu' ));
 
 }
 
@@ -74,4 +75,8 @@ function footer_nav_1() {
 
 function footer_nav_2() {
 	wp_nav_menu( array( 'theme_location' => 'footer-menu-2', 'container_class' => 'genesis-nav-menu' ) );
+}
+
+function drawer_navigation() {
+	wp_nav_menu( array( 'theme_location' => 'drawer-navigation', 'container_class' => 'genesis-nav-menu' ) );
 }

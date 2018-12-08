@@ -14,16 +14,18 @@
 
 #drawer-nav {
   position: absolute;
-  top: 90px;
+  top: 80px;
   left: 0px;
   min-width: 226px;
   z-index: 1002;
   display:none;
-  height:auto !important;
+  height:calc(100vh - 80px) !important;
+
 }
 
 .admin-bar #drawer-nav {
-  top:122px;
+  top:112px;
+  height:calc(100vh - 112px) !important;
 }
 
 .multilevelpushmenu_wrapper {
@@ -33,11 +35,15 @@
   margin: 0;
   padding: 0;
 
+  .genesis-nav-menu {
+    display:block !important;
+  }
+
   .levelHolderClass {
     position: absolute;
     overflow: hidden;
     top: 0;
-    background: #336ca6;
+    background-color: $gray--lightest;
     width: auto;
     min-height: 100%;
     font-size: 1em;
@@ -47,31 +53,36 @@
   .ltr {
     margin-left: -100%;
     left: 0;
-    -moz-box-shadow: 5px 0 5px -5px #1f4164;
-    -webkit-box-shadow: 5px 0 5px -5px #1f4164;
-    box-shadow: 5px 0 5px -5px #1f4164;
+    -moz-box-shadow: 1px 0 1px 0px rgba(0,0,0, 0.1);
+    -webkit-box-shadow: 1px 0 1px 0px rgba(0,0,0, 0.1);
+    box-shadow: 1px 0 1px 0px rgba(0,0,0, 0.1);
     filter: progid:DXImageTransform.Microsoft.Shadow(color=#1f4164,direction=90,strength=2);
   }
 
   .rtl {
     margin-right: -100%;
     right: 0;
-    -moz-box-shadow: 5px 0 5px 5px #1f4164;
-    -webkit-box-shadow: 5px 0 5px 5px #1f4164;
+    -moz-box-shadow: 5px 0 5px 5px $gray;
+    -webkit-box-shadow: 5px 0 5px 5px $gray;
     box-shadow: 5px 0 5px 5px #1f4164;
     filter: progid:DXImageTransform.Microsoft.Shadow(color=#1f4164,direction=270,strength=2);
   }
 
   .multilevelpushmenu_inactive {
-    background: #2e6196;
+    background: $gray--lightest;
   }
 
   h2 {
-    font-size: 1.5em;
-    line-height: 1em;
-    font-weight: bold;
-    color: #1f4164;
-    padding: 0 .4em 0 .4em;
+    padding:16px 20px;
+    margin-bottom:0;
+    font-family: $font-family--lato;
+    @include rem( font-size, 20px );
+    color: #3D749B;
+    font-weight:300;
+
+    &:before {
+      content: "::";
+    }
   }
 
   ul {
@@ -80,40 +91,31 @@
     margin: 0;
   }
 
-  li {
+  li, li.menu-item {
     cursor: pointer;
-    border-top: 1px solid #295685;
+    border-top: 1px solid $gray--light;
     padding: .4em .4em .4em .4em;
-  }
+    background-color:$white;
+    display: block;
 
-  li:last-child {
-    border-bottom: 1px solid #295685;
-  }
 
-  li:hover {
-    background-color: #295685;
   }
 
   a {
-    display: block;
-    outline: none;
-    overflow: hidden;
-    font-size: 1.5em;
-    line-height: 1em;
-    padding: .2em .2em;
-    text-decoration: none;
-    color: #fff;
+    padding:16px 20px;
+    font-weight:300;
   }
 
-  a:hover {
-    color: #ffe;
+  .fa {
+    color:$gray--light;
   }
+
+
 
   .backItemClass {
     display: block;
     padding: .4em .4em .4em .4em;
-    background: #2e6196;
-    border-top: 1px solid #295685;
+    background: rgba(137, 183, 215, 0.28);
   }
 
   .floatRight {
