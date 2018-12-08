@@ -33,13 +33,15 @@
       transition:500ms all;
     }
 
-    &:hover {
-      background-color:$gray--lighter;
+    @media screen and (min-width:$screen-size--small--up) {
+      &:hover {
+        background-color:$gray--lighter;
 
 
-      p, img, h4 {
-        transition:500ms all;
-        transform: scale(.9);
+        p, img, h4 {
+          transition:500ms all;
+          transform: scale(.9);
+        }
       }
     }
   }

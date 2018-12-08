@@ -7,6 +7,10 @@
 
     &:last-child {
       margin-bottom:0;
+
+      @include media( $breakpoint__screen-size--medium ) {
+        margin-bottom:80px;
+      }
     }
   }
 

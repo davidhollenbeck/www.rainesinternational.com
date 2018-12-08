@@ -16,10 +16,13 @@
   position: absolute;
   top: 80px;
   left: 0px;
-  min-width: 226px;
   z-index: 1002;
   display:none;
   height:calc(100vh - 80px) !important;
+
+  @include media( $breakpoint__screen-size--small ) {
+    z-index:1;
+  }
 
 }
 

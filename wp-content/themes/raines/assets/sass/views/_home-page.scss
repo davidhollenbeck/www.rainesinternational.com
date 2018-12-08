@@ -11,7 +11,16 @@
     }
   }
 
-  @media screen and (max-width: $breakpoint__screen-size--small) {
+  @include media( $breakpoint__screen-size--small ) {
+    &.row--padding {
+      padding: 60px 0;
+    }
+    .one-fourth {
+      padding: 60px 30px;
+    }
 
+    .link-block-inner {
+      padding:0 30px;
+    }
   }
 }
