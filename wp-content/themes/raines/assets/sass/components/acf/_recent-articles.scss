@@ -4,6 +4,10 @@
   li {
     margin-bottom:80px;
     max-width:600px;
+
+    &:last-child {
+      margin-bottom:0;
+    }
   }
 
   .recent-articles__headline {
