@@ -1,0 +1,46 @@
+/* ## Contact Form 7
+--------------------------------------------- */
+
+.wpcf7 {
+
+  button span.ajax-loader {
+    display:none;
+  }
+
+  p {
+    margin-bottom:0;
+  }
+
+  .wpcf7-email {
+    margin-bottom:20px;
+  }
+
+  @include media($breakpoint__screen-size--medium) {
+    button {
+      margin-bottom:50px;
+    }
+  }
+
+  @include media($breakpoint__screen-size--small) {
+    .wpcf7-email {
+      margin-bottom:20px;
+      padding:13px 48px 13px 24px;
+      @include rem( font-size, 14px );
+      line-height:1;
+      height:40px;
+    }
+
+    button {
+      padding:13px 48px 13px 24px;
+      @include rem( font-size, 14px );
+
+      input[type=submit] {
+        @include rem( font-size, 14px );
+      }
+
+      &:after {
+        top:15px;
+      }
+    }
+  }
+}

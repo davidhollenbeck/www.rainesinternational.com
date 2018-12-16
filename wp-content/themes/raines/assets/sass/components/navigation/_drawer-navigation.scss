@@ -46,7 +46,7 @@
     position: absolute;
     overflow: hidden;
     top: 0;
-    background-color: $gray--lightest;
+    background-color: rgba(255,255,255,0.4);
     width: auto;
     min-height: 100%;
     font-size: 1em;
@@ -71,9 +71,7 @@
     filter: progid:DXImageTransform.Microsoft.Shadow(color=#1f4164,direction=270,strength=2);
   }
 
-  .multilevelpushmenu_inactive {
-    background: $gray--lightest;
-  }
+
 
   h2 {
     padding:16px 20px;
@@ -98,8 +96,12 @@
     cursor: pointer;
     border-top: 1px solid $gray--light;
     padding: .4em .4em .4em .4em;
-    background-color:$white;
+    background-color:rgba(255,255,255,0.95);
     display: block;
+
+    &:hover {
+      background-color:rgba(255,255,255,0.8);
+    }
 
 
   }

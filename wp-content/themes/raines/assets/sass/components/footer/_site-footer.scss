@@ -49,6 +49,10 @@
         text-transform: uppercase;
         text-decoration: none;
         margin:0 0 1.5em;
+
+        &:hover {
+          color:$nav--hover-color;
+        }
       }
     }
 
@@ -124,6 +128,24 @@
 
     a {
       padding:0 12px;
+    }
+  }
+
+  @media screen and (max-width: $screen-size--smallish) {
+    .wrap {
+      padding:0 30px;
+    }
+
+    .footer-social {
+      @include rem( font-size, 16px );
+
+      a {
+        padding:0 5px;
+      }
+    }
+
+    p {
+      @include rem( font-size, 14px );
     }
   }
 }

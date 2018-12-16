@@ -47,6 +47,7 @@ function above_footer() {
 				<div class="mailing-list">
 					<h3>Subscribe To Our Mailing List</h3>
 					<p>Sign up for email alerts to stay current with the latest research, insights and more from our expert consultants.</p>
+                    <?php echo do_shortcode('[contact-form-7 id="10948" title="Mailchimp Subscribe"]'); ?>
 				</div>
 				<div class="above-footer-right">
 					<div class="contact-info">

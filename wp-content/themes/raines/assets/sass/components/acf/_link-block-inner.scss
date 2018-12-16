@@ -68,6 +68,10 @@
       width:100%;
       margin-left:0;
       float:none;
+
+      &.link-block-inner__block--3 {
+        margin-left:0;
+      }
     }
   }
 }

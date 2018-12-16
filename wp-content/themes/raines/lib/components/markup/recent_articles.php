@@ -22,7 +22,7 @@ function recent_articles($group) {
 
 	// The Loop
 		if ( $the_query->have_posts() ) {
-			echo '<div class="recent-articles"><p class="recent-articles__headline">' . $group['headline'] . '</p><ul>';
+			echo '<div class="recent-articles"><h2>' . $group['headline'] . '</h2><ul>';
 			while ( $the_query->have_posts() ) {
 				$the_query->the_post();
 				echo

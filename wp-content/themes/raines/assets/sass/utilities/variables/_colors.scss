@@ -24,10 +24,10 @@ $base__color: $gray;
 $body--background-color: $white;
 
 // Form Elements
-$input--background-color: $white;
-$input--border-color: $gray--light;
-$input--color: $gray;
-$input--focus-border-color: $gray--light;
+$input--background-color: transparent;
+$input--border-color: $blue;
+$input--color: $blue;
+$input--focus-border-color: rgba(137, 183, 215, 0.5);
 $button--background-color: $gray;
 $button--color: $white;
 $button--hover-background-color: $red;
@@ -47,9 +47,9 @@ $site-title--link-color: $gray;
 // Navigation
 //============================
 $nav--link-color: $black;
-$nav--hover-color: $black;
+$nav--hover-color: #3D749B;
 $submenu--border-color: $gray--lighter;
-$submenu--link-background-color: $white;
+$submenu--link-background-color: rgba(255,255,255,0.85);
 
 $primary-nav--background-color: $white;
 $primary-nav--border-color: $gray--lighter;
@@ -104,7 +104,7 @@ $widget-title--link-color: $gray;
 //===================
 $enews--background-color: $gray;
 $enews--color: $white;
-$enews__input--border-color: $gray;
+$enews__input--border-color: $blue;
 $enews__submit-button--background-color: $red;
 $enews__submit-button--color: $white;
 $enews__submit-button__BackgroundHoverColor: $white;

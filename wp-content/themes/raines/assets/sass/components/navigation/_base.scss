@@ -39,7 +39,6 @@
   .sub-menu .current-menu-item > a:hover,
   .sub-menu .current-menu-item > a:focus {
     color: $nav--hover-color;
-    text-decoration: underline;
   }
 
   .sub-menu {
@@ -60,6 +59,10 @@
       position: relative;
       width: 200px;
       word-wrap: break-word;
+    }
+
+    li:hover a {
+      background-color:rgba(255,255,255,0.75);
     }
 
     .sub-menu {
