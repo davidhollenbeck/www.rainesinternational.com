@@ -45,7 +45,9 @@ function drawer_navigation__toggle() {
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-65"><a href="http://raines:8888/industries/consumer/" itemprop="url" ><span itemprop="name">Consumer</span></a>
                             <ul>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74"><a href="http://raines:8888/industries/consumer/apparel/" itemprop="url"><span itemprop="name">Apparel</span></a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74"><a href="http://raines:8888/industries/consumer/consumer-technology/" itemprop="url"><span itemprop="name">Consumer Technology</span></a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><a href="http://raines:8888/industries/consumer/ecommerce/" itemprop="url"><span itemprop="name">Ecommerce</span></a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74"><a href="http://raines:8888/industries/consumer/food-beverage/" itemprop="url"><span itemprop="name">Food & Beverage</span></a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="http://raines:8888/industries/consumer/retail/" itemprop="url"><span itemprop="name">Retail</span></a></li>
                             </ul>
                         </li>

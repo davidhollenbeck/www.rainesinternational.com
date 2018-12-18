@@ -3,7 +3,7 @@
 .hero {
   position:relative;
   background-size:cover;
-  background-position: 80%;
+  background-repeat:no-repeat;
 
   .overlay {
     width: 100%;
@@ -21,15 +21,15 @@
       margin-left:0;
 
       &.contains-breadcrumb {
-        padding:70px 60px;
+        padding:105px 60px;
       }
 
       @include media( $breakpoint__screen-size--small ) {
         padding:80px 30px;
-      }
 
-      &.contains-breadcrumb {
-        padding:40px 30px;
+        &.contains-breadcrumb {
+          padding:45px 30px;
+        }
       }
     }
   }

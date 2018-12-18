@@ -14,7 +14,7 @@ namespace Ucoast\Raines;
 
 function hero($group) {
 	?>
-		<div class="hero" style="background-image:url('<?php echo $group['image']; ?>');">
+		<div class="hero" style="background-image:url('<?php echo $group['image']; ?>'); background-position:<?php echo $group['image_position_horizontal'] . '% ' . $group['image_position_vertical'] . '%'; ?>">
             <div class="overlay">
                 <div class="hero__text-container">
                     <div class="wrap <?php if ( $group['breadcrumbs'] == 'yes') { echo 'contains-breadcrumb'; } ?>">

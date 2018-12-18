@@ -61,6 +61,10 @@ function recent_articles($group) {
 						</li>';
 					$i++;
 				}
+					?>
+				<h3 class="recent-articles__post-title">Read More <span style="font-weight:700;"><?php echo get_cat_name($group['category']); ?></span> Articles</h3>
+					<a class="button" href="/category/<?php echo get_cat_slug($group['category']); ?>">Go</a>
+					<?php
 				echo '</ul></div>';
 			}
 			/* Restore original Post Data */
