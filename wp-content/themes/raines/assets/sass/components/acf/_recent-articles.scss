@@ -61,4 +61,17 @@
       @include rem( font-size, 20px );
     }
   }
+
+  &.recent-articles--row {
+    display:block;
+
+    ul {
+      display:flex;
+      flex-wrap:wrap;
+    }
+
+    img {
+      margin:0 0 20px;
+    }
+  }
 }

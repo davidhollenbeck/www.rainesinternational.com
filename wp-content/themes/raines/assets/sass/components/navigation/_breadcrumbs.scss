@@ -2,8 +2,15 @@
 --------------------------------------------- */
 
 .breadcrumb {
-  background-color: $breadcrumbs--background-color;
+  background-color: rgba(0,0,0,0.5);
   @include rem( font-size, $breadcrumbs--font-size );
   margin-bottom: 1px;
   padding: 12px 30px;
+  margin-bottom:30px;
+  display:inline-block;
+
+  a {
+    color:#fff;
+    text-decoration: none;
+  }
 }

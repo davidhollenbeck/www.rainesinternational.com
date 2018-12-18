@@ -50,6 +50,9 @@ function load_nonadmin_files() {
 		'components/markup/link_block_inner.php',
 		'components/markup/recent_articles.php',
 		'components/markup/slider.php',
+		'components/markup/hero.php',
+		'components/markup/spotlight.php',
+		'components/markup/inner_content.php',
 	);
 
 	load_specified_files( $filenames );

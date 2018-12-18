@@ -23,9 +23,13 @@ function link_block_inner( $content ) {
                     $classes .= 'first ';
                 }
 
-                if ( count( $content ) > 4 ) {
+                if ( count( $content ) > 4 || count( $content ) == 3 ) {
                     $classes .= 'one-third ';
                 }
+
+	            else if ( count( $content ) == 4 ) {
+		            $classes .= 'one-fourth ';
+	            }
 
                 else if ( count( $content ) > 1) {
                     $classes .= 'one-half';

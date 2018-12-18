@@ -77,8 +77,6 @@ function home__content_block_2() {
 	content_block( $content );
 }
 
-// Next steps: add widgetized area to recent_articles.php, add link block sections
-
 
 
 

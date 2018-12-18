@@ -20,5 +20,15 @@ function render_button($group, $class) {
 		</a>
 	<?php
 	endif;
+}
 
+function render_breadcrumbs($post_id) {
+    $post = get_post($post_id);
+    $parent = wp_get_post_parent_id( $post_id );
+
+    if ($post) :
+        ?>
+            <h4 class="breadcrumb"><a href="<?php echo get_permalink($parent); ?>">- Back To <?php echo get_the_title($parent); ?></a></h4>
+        <?php
+    endif;
 }

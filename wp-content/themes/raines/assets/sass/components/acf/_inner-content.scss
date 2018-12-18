@@ -1,0 +1,15 @@
+/* ## WYSIWYG Content
+--------------------------------------------- */
+
+.inner-content {
+  p {
+    margin-bottom:1em;
+    @include rem( font-size, 18px );
+  }
+
+  @include media($breakpoint__screen-size--medium) {
+    p {
+      @include rem( font-size, 16px );
+    }
+  }
+}

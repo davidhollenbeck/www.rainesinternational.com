@@ -4,7 +4,10 @@
 .link-block-inner {
   margin-top:40px;
 
-  .one-third.link-block-inner__block--3 {
+  .one-third.link-block-inner__block:nth-child(3n-5),
+  .one-half.link-block-inner__block:nth-child(2n-1),
+  .one-fourth.link-block-inner__block:nth-child(4n-3)
+  {
     margin-left:0;
     clear:both;
   }
@@ -50,16 +53,19 @@
     .link-block-inner__block {
       width:48.717948717948715%;
       margin-left:2.564102564102564%;
+    }
 
-      &.link-block-inner__block--3 {
-        clear:none;
-        margin-left:2.564102564102564%;
-      }
+    .one-third.link-block-inner__block:nth-child(3n-5),
+    .one-fourth.link-block-inner__block:nth-child(4n-7)
+    {
+      clear:none;
+      margin-left:2.564102564102564%;
+    }
 
-      &:nth-child(odd) {
-        margin-left:0;
-        clear:both;
-      }
+    .one-third.link-block-inner__block:nth-child(odd),
+    .one-fourth.link-block-inner__block:nth-child(odd){
+      clear:both;
+      margin-left:0;
     }
   }
 
@@ -69,7 +75,11 @@
       margin-left:0;
       float:none;
 
-      &.link-block-inner__block--3 {
+      &:nth-child(3n-5) {
+        margin-left:0;
+      }
+
+      &:nth-child(2n-1) {
         margin-left:0;
       }
     }
