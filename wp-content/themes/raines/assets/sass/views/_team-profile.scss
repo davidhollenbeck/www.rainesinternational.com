@@ -1,0 +1,45 @@
+/* ## Team Profile
+--------------------------------------------- */
+
+.team-member__flexbox {
+  padding-bottom:0;
+
+  .team-profile-expertise {
+    h3 {
+      font-family: "Lato", sans-serif;
+      font-weight: 400;
+      padding-bottom: .5em;
+      border-bottom: 1px solid #89B7D7;
+      margin-bottom: .5em;
+    }
+
+    li {
+      list-style-position:inside;
+      @include rem(font-size, 18px);
+      margin-bottom:.5em;
+    }
+
+    li:before {
+      content:'\00bb';
+      font-size: 1.2em;
+      margin-right: .5em;
+      color: $blue;
+    }
+
+    a:hover {
+      text-decoration:underline;
+      color: #89B7D7;
+    }
+  }
+
+  @include media( $breakpoint__screen-size--small ) {
+    .one-fourth {
+      order:1;
+      margin-bottom:30px;
+    }
+
+    .three-fourths {
+      order:2;
+    }
+  }
+}
