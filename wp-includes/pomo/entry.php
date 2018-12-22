@@ -36,7 +36,7 @@ class Translation_Entry {
 	 * 	- translations (array) -- translations of the string and possibly -- its plural forms
 	 * 	- context (string) -- a string differentiating two equal strings used in different contexts
 	 * 	- translator_comments (string) -- comments left by translators
-	 * 	- extracted_comments (string) -- comments left by raines
+	 * 	- extracted_comments (string) -- comments left by developers
 	 * 	- references (array) -- places in the code this strings is used, in relative_to_root_path/file.php:linenum form
 	 * 	- flags (array) -- flags like php-format
 	 */

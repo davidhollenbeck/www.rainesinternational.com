@@ -49,6 +49,7 @@ h6 {
   text-shadow:$base--text-shadow;
   line-height:$headings--line-height;
   margin:0 0 3em;
+  @include rem( font-size, 18px );
 }
 
 // Media Queries

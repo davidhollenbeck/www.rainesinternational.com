@@ -17,7 +17,7 @@ if ( ! class_exists( 'Requests' ) ) {
 /**
  * Core class used for managing HTTP transports and making HTTP requests.
  *
- * This class is used to consistently make outgoing HTTP requests easy for raines
+ * This class is used to consistently make outgoing HTTP requests easy for developers
  * while still being compatible with the many PHP configurations under which
  * WordPress runs.
  *

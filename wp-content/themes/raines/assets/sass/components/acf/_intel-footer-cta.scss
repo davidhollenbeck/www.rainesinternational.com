@@ -1,0 +1,36 @@
+/* ## Intel Footer CTA
+--------------------------------------------- */
+.intel-footer-cta {
+  background-color:#F8F8F8;
+  display:block;
+
+  h2 {
+    margin-bottom:0;
+    text-align:left;
+    @include rem('font-size', 30px);
+    display:inline-block;
+  }
+
+  .button {
+    float:right;
+  }
+
+  @include media( $breakpoint__screen-size--larger ) {
+    h2 {
+      max-width:calc(100% - 250px);
+    }
+  }
+
+  @include media( $breakpoint__screen-size--small ) {
+    h2 {
+      margin:0 0 .8em;
+      @include rem('font-size', 28px);
+      max-width:500px;
+      display:block;
+    }
+
+    .button {
+      float:none;
+    }
+  }
+}

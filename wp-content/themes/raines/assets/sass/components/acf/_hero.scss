@@ -5,9 +5,28 @@
   background-size:cover;
   background-repeat:no-repeat;
 
+  h1 {
+    margin-bottom:.4em;
+    @include rem( font-size, 52px );
+  }
+
+  .hero__text-container--team-member {
+     h1 {
+       margin-bottom: .2em;
+     }
+  }
+
+  p {
+    margin-bottom:4em;
+  }
+
   .overlay {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.43);
+  }
+
+  .team-member-mobile-image {
+    display:none;
   }
 
   .hero__text-container {
@@ -15,22 +34,148 @@
     margin-left:auto;
     margin-right:auto;
 
+    .hero__details {
+      color:#fff;
+      margin-bottom:1em;
+      padding-bottom: 1em;
+      border-bottom: 1px solid rgba(255,255,255,0.5);
+      position:relative;
+    }
+
+    .hero__icon_container {
+      position:absolute;
+      right:0;
+      bottom:1em;
+    }
+
+    .hero__icon {
+      a {
+        color:#fff;
+        margin-top:.5em;
+        display:block;
+        margin-right:1em;
+
+        &:hover {
+          color:rgba(137, 183, 215, 1);
+        }
+
+        &:focus {
+          color:rgba(137, 183, 215, 1);
+        }
+      }
+    }
+
+    &.hero__text-container--left {
+
+    }
+
+    &.hero__text-container--right {
+      position:relative;
+      left:calc(100% - 750px);
+    }
+
     .wrap {
-      padding:140px 60px;
+      padding:140px 60px 0;
       max-width:750px;
       margin-left:0;
 
       &.contains-breadcrumb {
-        padding:105px 60px;
+        padding:40px 60px 0;
       }
 
       @include media( $breakpoint__screen-size--small ) {
         padding:80px 30px;
+
+        h1 {
+          @include rem( font-size, 40px);
+        }
 
         &.contains-breadcrumb {
           padding:45px 30px;
         }
       }
     }
+  }
+
+  @include media( $breakpoint__screen-size--large ) {
+    .hero__text-container {
+      margin-left:0;
+      margin-right:0;
+
+      &.hero__text-container--right {
+        left:calc(30% - 30px);
+        width:70%;
+      }
+    }
+  }
+
+  @include media( $breakpoint__screen-size--medium ) {
+    &.hero--team-member .hero__text-container .wrap {
+      padding:80px 30px 0;
+    }
+  }
+
+  @include media( $breakpoint__screen-size--small ) {
+    &.hero--team-member {
+      background-image:none;
+
+      .hero__text-container {
+        width:100%;
+        left:0;
+        background-color:rgba(137, 183, 215, 1);
+
+        .wrap {
+          max-width:100%;
+          padding:30px;
+
+          h1 {
+            @include rem(font-size, 30px);
+          }
+
+          .hero__subheadline {
+            @include rem(font-size, 14px);
+            line-height:1.3;
+          }
+        }
+
+        .hero__subheadline {
+          margin-bottom:1em;
+        }
+      }
+
+      h1, p, .subheadline, .hero__icon_container a {
+        //color:#333;
+        //text-shadow:none;
+      }
+
+
+
+      .hero__details {
+        //border-bottom:1px solid #89B7D7;
+        padding-right:30px;
+
+        .hero__icon a {
+          margin-right:0;
+          @include rem(font-size, 12px);
+        }
+
+        .hero__position, .hero__location {
+          display:block;
+        }
+
+        .details-divider {
+          display:none;
+        }
+      }
+
+      .team-member-mobile-image {
+        display:block;
+        max-width:100%;
+      }
+    }
+  }
+
+  @include media( $breakpoint__screen-size--smallish ) {
+
   }
 }

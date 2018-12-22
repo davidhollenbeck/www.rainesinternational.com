@@ -26,7 +26,7 @@
 	<?php esc_html_e( 'Child themes that include this type of home page typically include additional theme-specific tutorials which can be accessed via a sticky post at the top of that child theme support forum.', 'genesis' ); ?>
 </p>
 <p>
-	<?php esc_html_e( 'If your theme uses a custom home page and you want to show the latest posts in a blog format, do not use the blog template. Instead, you need to rename the page_home.php file to home-old.php instead.', 'genesis' ); ?>
+	<?php esc_html_e( 'If your theme uses a custom home page and you want to show the latest posts in a blog format, do not use the blog template. Instead, you need to rename the home.php file to home-old.php instead.', 'genesis' ); ?>
 </p>
 <p>
 	<?php esc_html_e( 'Another common home page is the "blog" type home page, which is common to most of the free child themes. This shows your latest posts and requires no additional setup.', 'genesis' ); ?>
@@ -35,5 +35,5 @@
 	<?php esc_html_e( 'The third type of home page is the new dynamic home page. This is common on the newest child themes. It will show your latest posts in a blog type listing unless you put widgets into the home page sidebars.', 'genesis' ); ?>
 </p>
 <p>
-	<?php esc_html_e( 'This setup is preferred because it makes it easier to show a blog on the front page (no need to rename the page_home.php file) and does not have the confusion of no content on the home page when the theme is initially installed.', 'genesis' ); ?>
+	<?php esc_html_e( 'This setup is preferred because it makes it easier to show a blog on the front page (no need to rename the home.php file) and does not have the confusion of no content on the home page when the theme is initially installed.', 'genesis' ); ?>
 </p>

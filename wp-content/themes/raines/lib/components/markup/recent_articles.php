@@ -12,11 +12,21 @@
 
 namespace Ucoast\Raines;
 
-function recent_articles($group) {
-	$args = array(
-		'cat' => $group['category'],
-		'posts_per_page' => $group['posts_per_page']
-	);
+function recent_articles($group, $type = 'default') {
+
+	if ( $type == 'default' ) {
+		$args = array(
+			'cat' => $group['category'],
+			'posts_per_page' => $group['posts_per_page']
+		);
+	}
+
+	else if ( $type == 'team-member') {
+		$args = array(
+			'post__in' => $group['articles']
+		);
+	}
+
 	// The Query
 	$the_query = new \WP_Query( $args );
 
@@ -35,25 +45,53 @@ function recent_articles($group) {
 						</li>';
 				}
 				echo '</ul></div>';
-			} else if ( $group['layout'] == "row") {
-				echo '<div class="row row--padding recent-articles recent-articles--row"><h2>' . $group['headline'] . '</h2><ul>';
+			} else if ( $group['layout'] == "row" || $type == 'team-member') {
+				if ( $type == 'default') {
+					echo '<div class="row row--padding recent-articles recent-articles--team-member">
+					<h3 class="recent-articles__post-title">Read More <span style="font-weight:700;">' . get_cat_name($group["category"]) . '</span> Articles</h3>
+					<ul>';
+				}
+
+				elseif ( $type == 'team-member') {
+					echo '<div class="row row--padding recent-articles recent-articles--row recent-articles--team-member">
+					<h3 class="recent-articles__post-title">Articles by <span style="font-weight:700;">' . $group["headline"] . '</span></h3>
+					<ul>';
+				}
 				$i = 0;
 				while ( $the_query->have_posts() ) {
 					$the_query->the_post();
 
-					if ( $i == 0 ) {
-						$class = ' first';
+					if ( $group['columns'] == '3' ) {
+						if ( $i == 0 ) {
+							$class = 'first one-third';
+						}
+
+						else if ($i %3 == 0) {
+							$class = 'first one-third';
+						}
+
+						else {
+							$class = 'one-third';
+						}
 					}
 
-					else if ($i %3 == 0) {
-						$class = ' first';
+					else if ( $group['columns'] == '4' ) {
+						if ( $i == 0 ) {
+							$class = 'first one-fourth';
+						}
+
+						else if ($i %4 == 0) {
+							$class = 'first one-fourth';
+						}
+
+						else {
+							$class = 'one-fourth';
+						}
 					}
 
-					else {
-						$class = '';
-					}
+
 					echo
-						'<li class="one-third' . $class . '">
+						'<li class="' . $class . '">
 							<img src="' . get_the_post_thumbnail_url() . '"/>
 							<h3 class="recent-articles__post-title">' . get_the_title() . '</h3>
 							<p class="recent-articles__post-excerpt">' . get_the_excerpt() .'</p>
@@ -61,10 +99,6 @@ function recent_articles($group) {
 						</li>';
 					$i++;
 				}
-					?>
-				<h3 class="recent-articles__post-title">Read More <span style="font-weight:700;"><?php echo get_cat_name($group['category']); ?></span> Articles</h3>
-					<a class="button" href="/category/<?php echo get_cat_slug($group['category']); ?>">Go</a>
-					<?php
 				echo '</ul></div>';
 			}
 			/* Restore original Post Data */

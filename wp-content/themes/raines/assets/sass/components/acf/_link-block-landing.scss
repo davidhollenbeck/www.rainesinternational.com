@@ -4,6 +4,10 @@
 .link-block-landing {
   display:block;
 
+  .link-block-landing__inner {
+    margin-bottom:-2.564102564102564%;
+  }
+
   .link-block-landing__block--2 {
     margin-left:0;
     clear:both;
@@ -56,6 +60,10 @@
   @media screen and (max-width: $screen-size--small) {
     .link-block-landing__block {
       margin-bottom: 40px;
+    }
+
+    .link-block-landing__inner {
+      margin-bottom:-40px;
     }
   }
 }

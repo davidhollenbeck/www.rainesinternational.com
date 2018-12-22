@@ -13,6 +13,8 @@
 
   .wpcf7-email {
     margin-bottom:20px;
+    height:46px;
+    @include rem( font-size, 16px);
   }
 
   @include media($breakpoint__screen-size--medium) {

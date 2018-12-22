@@ -12,7 +12,7 @@
 
 namespace Ucoast\Raines;
 
-function link_block_inner( $content ) {
+function link_block_inner( $content, $columns ) {
 	?>
 	<div class="link-block-inner">
 		<?php
@@ -23,16 +23,20 @@ function link_block_inner( $content ) {
                     $classes .= 'first ';
                 }
 
-                if ( count( $content ) > 4 || count( $content ) == 3 ) {
+                if ( $columns == '3' ) {
                     $classes .= 'one-third ';
                 }
 
-	            else if ( count( $content ) == 4 ) {
+	            else if ( $columns == '4') {
 		            $classes .= 'one-fourth ';
 	            }
 
-                else if ( count( $content ) > 1) {
+                else if ( $columns == '2' ) {
                     $classes .= 'one-half';
+                }
+
+                else {
+                    $classes .= 'one-third';
                 }
 
                 render_link_block_inner( $block, $i, $classes );

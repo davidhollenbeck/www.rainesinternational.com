@@ -38,6 +38,7 @@ function load_home_page() {
 	<?php
 	home__link_block_landing();
 	home__content_block_2();
+	intel_footer_cta();
 }
 
 function home__do_slider() {
@@ -62,15 +63,14 @@ function home__recent_articles() {
 
 function home__link_block_inner() {
     $content = get_field('link_block_inner');
-    link_block_inner( $content );
+    $columns = get_field('link_block_inner_columns');
+    link_block_inner( $content, $columns );
 }
 
 function home__link_block_landing() {
 	$content = get_field('link_block_landing');
 	link_block_landing( $content );
 }
-
-
 
 function home__content_block_2() {
 	$content = get_field('content_block_2');

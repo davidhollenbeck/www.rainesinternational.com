@@ -16,26 +16,28 @@ function link_block_landing( $content ) {
 	?>
 	<div class="row row--padding row--border-top link-block-landing">
         <h2>Explore Practices</h2>
+        <div class="link-block-landing__inner">
 		<?php
-		foreach ( $content as $i=>$block) {
-			$classes = '';
+            foreach ( $content as $i=>$block) {
+                $classes = '';
 
-			if ( $i == 0 ) {
-				$classes .= 'first ';
-			}
+                if ( $i == 0 ) {
+                    $classes .= 'first ';
+                }
 
-			if ( count( $content ) > 1) {
-				$classes .= 'one-half';
-			}
+                if ( count( $content ) > 1) {
+                    $classes .= 'one-half';
+                }
 
-			else if ( count( $content ) == 3 ) {
-				$classes .= 'one-third';
-			}
+                else if ( count( $content ) == 3 ) {
+                    $classes .= 'one-third';
+                }
 
-			render_link_block_landing( $block, $i, $classes );
-		}
+                render_link_block_landing( $block, $i, $classes );
+            }
 		?>
-        <div class="clearfix"></div>
+            <div class="clearfix"></div>
+        </div>
 	</div>
 	<?php
 }

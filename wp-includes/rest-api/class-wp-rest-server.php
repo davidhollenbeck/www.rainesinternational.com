@@ -1121,7 +1121,7 @@ class WP_REST_Server {
 		 * Filters the publicly-visible data for routes.
 		 *
 		 * This data is exposed on indexes and can be used by clients or
-		 * raines to investigate the site and find out how to use it. It
+		 * developers to investigate the site and find out how to use it. It
 		 * acts as a form of self-documentation.
 		 *
 		 * @since 4.4.0

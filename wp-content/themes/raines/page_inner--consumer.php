@@ -51,6 +51,8 @@ function load_inner_page_consumer() {
 	if( get_field('recent_articles')['display'] == 'yes' ) {
 		inner_consumer__do_recent_articles();
 	}
+
+	intel_footer_cta();
 }
 
 function inner_consumer__do_hero() {
@@ -75,7 +77,8 @@ function inner_consumer__do_recent_articles() {
 
 function inner_consumer__link_block_inner() {
 	$content = get_field('link_block_inner');
-	link_block_inner( $content );
+	$columns = get_field('link_block_inner_columns');
+	link_block_inner( $content, $columns );
 }
 
 // Run the Genesis loop.

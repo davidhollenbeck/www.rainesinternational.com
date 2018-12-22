@@ -6,9 +6,35 @@
   position:relative;
   background-color:$gray--lightest;
 
+  li {
+    list-style-position:inside;
+    @include rem(font-size, 18px);
+    margin-bottom:1em;
+  }
+
+  li:before {
+    content:'\00bb';
+    font-size: 1.2em;
+    margin-right: .5em;
+    color: $blue;
+  }
+
+  h3 {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #89B7D7;
+    margin-bottom: .5em;
+  }
+
   .content-block__inner {
     padding:60px 100px;
     position:relative;
+  }
+
+  &.content-block--team-member {
+    background-color:transparent;
+    margin-bottom:30px;
   }
 
   &.content-block--image-right {

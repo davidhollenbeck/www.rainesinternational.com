@@ -23,6 +23,7 @@ function load_landing_page() {
 	?><div class="row row--padding"><?php
 	landing__link_block_inner();
 	?></div><?php
+	intel_footer_cta();
 }
 
 function landing__do_hero() {
@@ -33,12 +34,15 @@ function landing__do_hero() {
 function landing__link_block_inner() {
     if ( is_page('solutions') ) {
 	    $content = get_field('link_block_inner', 'option');
+	    $columns = get_field('link_block_inner_columns', 'option');
     }
     else {
         $content = get_field('link_block_inner');
+	    $columns = get_field('link_block_inner_columns');
     }
 
-	link_block_inner( $content );
+
+	link_block_inner( $content, $columns );
 }
 
 // Run the Genesis loop.

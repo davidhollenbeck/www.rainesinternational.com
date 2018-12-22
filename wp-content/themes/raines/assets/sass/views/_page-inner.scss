@@ -53,6 +53,10 @@
     }
   }
 
+  .intel-footer-cta {
+    margin-top:60px;
+  }
+
   @include media($breakpoint__screen-size--medium) {
     .row--padding {
       padding: 30px 30px 0;

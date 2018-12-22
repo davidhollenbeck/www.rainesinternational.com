@@ -51,6 +51,8 @@ function load_inner_page_solutions() {
 	if( get_field('recent_articles')['display'] == 'yes' ) {
 		inner_solutions__do_recent_articles();
 	}
+
+	intel_footer_cta();
 }
 
 function inner_solutions__do_hero() {
@@ -75,7 +77,8 @@ function inner_solutions__do_recent_articles() {
 
 function inner_solutions__link_block_inner() {
 	$content = get_field('link_block_inner', 'option');
-	link_block_inner( $content );
+	$columns = get_field('link_block_inner_columns', 'option');
+	link_block_inner( $content, $columns );
 }
 
 // Run the Genesis loop.

@@ -44,6 +44,8 @@ function load_inner_page() {
     if( get_field('recent_articles')['display'] == 'yes' ) {
 	    inner__do_recent_articles();
     }
+
+	intel_footer_cta();
 }
 
 function inner__do_hero() {

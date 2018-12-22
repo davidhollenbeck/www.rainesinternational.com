@@ -53,6 +53,9 @@ function load_nonadmin_files() {
 		'components/markup/hero.php',
 		'components/markup/spotlight.php',
 		'components/markup/inner_content.php',
+		'components/markup/intel_footer_cta.php',
+		'components/markup/team_index.php',
+		'components/markup/team_profile.php',
 	);
 
 	load_specified_files( $filenames );
