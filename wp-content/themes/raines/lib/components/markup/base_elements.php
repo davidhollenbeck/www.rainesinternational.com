@@ -19,16 +19,21 @@ function render_button($group, $class) {
 			<?php echo $group['link_text']; ?>
 		</a>
 	<?php
+
 	endif;
 }
 
-function render_breadcrumbs($post_id) {
+function render_breadcrumbs($post_id, $type='default') {
     $post = get_post($post_id);
     $parent = wp_get_post_parent_id( $post_id );
 
-    if ($post) :
+    if ($post && $type == 'default') :
         ?>
             <h4 class="breadcrumb"><a href="<?php echo get_permalink($parent); ?>">Back To <?php echo get_the_title($parent); ?></a></h4>
+        <?php
+    elseif ($post && $type == 'team-member'):
+        ?>
+            <h4 class="breadcrumb"><a href="/about/team">Back To Team</a></h4>
         <?php
     endif;
 }

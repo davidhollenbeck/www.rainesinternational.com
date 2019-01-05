@@ -20,21 +20,29 @@ add_action('genesis_before_loop', __NAMESPACE__ . '\load_inner_page', 1);
 
 function load_inner_page() {
 	inner__do_hero();
-
 	?>
 
+
 	<div class="row row--padding inner-page__flexbox">
-		<?php if( get_field('spotlight')['display'] == 'yes' ): ?>
-		<div class="first one-third">
-			<?php inner__do_spotlight(); ?>
+		<?php if( get_field('spotlight')['display'] == 'yes' ||  get_field( 'spotlight')['profiles'] == 'yes' ): ?>
+		<div class="first one-fourth">
+			<?php
+                if( get_field('spotlight')['display'] == 'yes') {
+	                inner__do_spotlight();
+                }
+
+                if( get_field( 'spotlight')['profiles'] == 'yes' ) {
+	                team_sidebar_slider();
+			    }
+			?>
 		</div>
-		<div class="two-thirds">
+		<div class="three-fourths">
 			<?php
 			inner__do_content();
 			?>
 		</div>
 		<div class="clearfix"></div>
-		<?php elseif ( get_field('spotlight')['display'] == 'no' ):
+		<?php elseif ( get_field('spotlight')['display'] == 'no' && get_field( 'spotlight')['profiles'] == 'no' ):
 			inner__do_content();
 		endif;
 		?>

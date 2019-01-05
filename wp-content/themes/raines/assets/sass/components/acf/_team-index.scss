@@ -1,0 +1,96 @@
+/* ## Team Index
+--------------------------------------------- */
+
+.team__flexbox {
+  .team-profile-box {
+    margin-bottom:2.564102564102564%;
+
+    @media screen and (min-width:$screen-size--small--up) {
+      &:hover {
+        background-color:$gray--lighter;
+
+
+        img, h3, h4 {
+          transition:500ms all;
+          transform: scale(.9);
+        }
+      }
+    }
+  }
+
+  @include media( $breakpoint__screen-size--large ) {
+    .one-fourth {
+      width: 31.623931623931625%;
+
+      &.first {
+        margin-left:2.564102564102564%;
+        clear:initial;
+      }
+
+      &:nth-child(3n-5) {
+        margin-left:0;
+        clear:both;
+      }
+    }
+  }
+
+  @include media( $breakpoint__screen-size--medium ) {
+    .team-profile-box.one-fourth {
+      margin-left:2.564102564102564%;
+      margin-bottom:2.564102564102564%;
+
+      &:nth-child(3n-5) {
+        margin-left:0;
+        clear:both;
+      }
+    }
+  }
+
+  @include media( $breakpoint__screen-size--small ) {
+    .team-profile-box.one-fourth {
+      width: 48.717948717948715%;
+      margin-left:2.564102564102564%;
+      margin-bottom:2.564102564102564%;
+
+      &:nth-child(3n-5) {
+        margin-left:2.564102564102564%;
+        clear:initial;
+      }
+
+      &:nth-child(2n-1) {
+        margin-left:0 !important;
+        clear:both;
+      }
+    }
+  }
+}
+
+.team-profile-box {
+  transition:500ms all;
+  text-decoration: none;
+
+  img, h3, h4 {
+    transition:500ms all;
+  }
+
+  h3 {
+    font-weight:400;
+    margin-bottom:5px;
+  }
+
+  h4 {
+    @include rem(font-size, 16px);
+    font-family: "Roboto", sans-serif;
+    color: $blue;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+  }
+
+  @include media( $breakpoint__screen-size--small ) {
+    h3 {
+      @include rem(font-size, 18px);
+      margin-bottom:5px;
+    }
+  }
+}
+

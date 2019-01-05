@@ -4,7 +4,8 @@
 .breadcrumb {
 
   padding:0;
-  margin-bottom:60px;
+  margin-top:60px;
+  margin-bottom:10px;
   transform: perspective(1px) translateZ(0);
   -webkit-transition-property: color;
   transition-property: color;
@@ -31,7 +32,9 @@
 
 
 .hero__text-container--right .breadcrumb {
-  text-align:right;
+  text-align:left;
+  margin-bottom:10px;
+  margin-top:60px;
 }
 
 .breadcrumb:hover, .breadcrumb:focus {

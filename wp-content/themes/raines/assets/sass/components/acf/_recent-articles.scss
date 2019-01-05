@@ -1,6 +1,7 @@
 /* ## Recent Articles
 --------------------------------------------- */
 .recent-articles {
+
   li {
     margin-bottom:80px;
     max-width:600px;
@@ -40,6 +41,7 @@
     padding-bottom: 1em;
     border-bottom: 1px solid #89B7D7;
     margin-bottom: 1em;
+    margin-top:.5em;
     width:90%;
 
     @media screen and (max-width: $screen-size--smallish) {
@@ -111,6 +113,30 @@
 
       &:nth-child(2n-1) {
         margin-left:0;
+      }
+    }
+  }
+}
+
+.recent-articles--row, .recent-articles--team-member {
+  a {
+    text-decoration:none;
+    transition:500ms all;
+    margin-bottom:15px;
+
+    p, img, h3 {
+      transition:500ms all;
+    }
+
+    @media screen and (min-width:$screen-size--small--up) {
+      &:hover {
+        background-color:$gray--lighter;
+
+
+        p, img, h3 {
+          transition:500ms all;
+          transform: scale(.9);
+        }
       }
     }
   }

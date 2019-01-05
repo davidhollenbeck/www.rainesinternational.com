@@ -23,22 +23,30 @@ function load_inner_page_consumer() {
 
 	?>
 
-	<div class="row row--padding inner-page__flexbox">
-		<?php if( get_field('spotlight')['display'] == 'yes' ): ?>
-			<div class="first one-third">
-				<?php inner_consumer__do_spotlight(); ?>
-			</div>
-			<div class="two-thirds">
+    <div class="row row--padding inner-page__flexbox">
+		<?php if( get_field('spotlight')['display'] == 'yes' ||  get_field( 'spotlight')['profiles'] == 'yes' ): ?>
+            <div class="first one-fourth">
+				<?php
+				if( get_field('spotlight')['display'] == 'yes') {
+					inner_consumer__do_spotlight();
+				}
+
+				if( get_field( 'spotlight')['profiles'] == 'yes' ) {
+					team_sidebar_slider();
+				}
+				?>
+            </div>
+            <div class="three-fourths">
 				<?php
 				inner_consumer__do_content();
 				?>
-			</div>
-			<div class="clearfix"></div>
-		<?php else:
+            </div>
+            <div class="clearfix"></div>
+		<?php elseif ( get_field('spotlight')['display'] == 'no' && get_field( 'spotlight')['profiles'] == 'no' ):
 			inner_consumer__do_content();
 		endif;
 		?>
-	</div>
+    </div>
 
     <div class="row row--padding">
 		<?php

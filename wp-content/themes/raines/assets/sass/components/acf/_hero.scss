@@ -10,12 +10,6 @@
     @include rem( font-size, 52px );
   }
 
-  .hero__text-container--team-member {
-     h1 {
-       margin-bottom: .2em;
-     }
-  }
-
   p {
     margin-bottom:4em;
   }
@@ -72,6 +66,9 @@
     &.hero__text-container--right {
       position:relative;
       left:calc(100% - 750px);
+      max-width: 750px;
+      margin-left: 0;
+      margin-right: 0;
     }
 
     .wrap {
@@ -116,13 +113,15 @@
   }
 
   @include media( $breakpoint__screen-size--small ) {
+
     &.hero--team-member {
       background-image:none;
 
       .hero__text-container {
         width:100%;
         left:0;
-        background-color:rgba(137, 183, 215, 1);
+        background-color:#5f9ea0;
+        max-width:100%;
 
         .wrap {
           max-width:100%;

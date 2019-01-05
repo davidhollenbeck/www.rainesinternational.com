@@ -45,6 +45,10 @@ function hero($group, $type = 'default') {
                             if ( $group['breadcrumbs'] == 'yes') {
 	                            render_breadcrumbs( get_the_id() );
                             }
+
+                            elseif ( $type == 'team-member' ) {
+                                render_breadcrumbs( get_the_id(), $type );
+                            }
                         ?>
                         <h1 class="hero__headline"><?php echo $group['headline']; ?></h1>
 	                    <?php

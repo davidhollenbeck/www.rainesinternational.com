@@ -43,10 +43,11 @@ function link_block_landing( $content ) {
 }
 
 function render_link_block_landing( $group, $index, $classes ) {
+	$img = wp_get_attachment_image_src( $group['image'], 'landing-link-image' );
 	?>
 	<div class="link-block-landing__block link-block-landing__block--<?php echo $index; ?> <?php echo $classes; ?>">
 		<a href="<?php echo $group['link_text']; ?>" <?php format_link_target($group['target']); ?> >
-            <img src="<?php echo $group['image']; ?>"/>
+            <img src="<?php echo $img[0]; ?>" width="<?php echo $img[1]; ?>" height="<?php echo $img[2]; ?>"/>
         </a>
         <div>
             <h4 class="link-block-landing__headline"><?php echo $group['headline']; ?></h4>

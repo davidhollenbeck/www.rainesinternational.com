@@ -54,7 +54,7 @@ function recent_articles($group, $type = 'default') {
 
 				elseif ( $type == 'team-member') {
 					echo '<div class="row row--padding recent-articles recent-articles--row recent-articles--team-member">
-					<h3 class="recent-articles__post-title">Articles by <span style="font-weight:700;">' . $group["headline"] . '</span></h3>
+					<h3 class="recent-articles__post-title" style="padding:.5em;">Articles by ' . $group["first_name"] . '</h3>
 					<ul>';
 				}
 				$i = 0;
@@ -91,13 +91,13 @@ function recent_articles($group, $type = 'default') {
 
 
 					echo
-						'<li class="' . $class . '">
-							<img src="' . get_the_post_thumbnail_url() . '"/>
-							<h3 class="recent-articles__post-title">' . get_the_title() . '</h3>
-							<p class="recent-articles__post-excerpt">' . get_the_excerpt() .'</p>
-							<a class="button button--primary" href="' . get_the_permalink() . '">Read More</a>
-						</li>';
+					'<a href="' . get_the_permalink() . '" class="' . $class . '">
+						<img src="' . wp_get_attachment_image_src( get_post_thumbnail_id(), "article-list-image" )[0] . '"/>
+						<h3 class="recent-articles__post-title">' . get_the_title() . '</h3>
+						<p class="recent-articles__post-excerpt">' . get_the_excerpt() .'</p>
+					</a>';
 					$i++;
+
 				}
 				echo '</ul></div>';
 			}
@@ -107,5 +107,3 @@ function recent_articles($group, $type = 'default') {
 			// no posts found
 		}
 }
-
-

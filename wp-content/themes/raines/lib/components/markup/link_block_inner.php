@@ -47,9 +47,10 @@ function link_block_inner( $content, $columns ) {
 }
 
 function render_link_block_inner( $group, $index, $classes ) {
+    $img = wp_get_attachment_image_src( $group['image'], 'article-list-image' );
 	?>
 	<a class="link-block-inner__block link-block-inner__block--<?php echo $index; ?> <?php echo $classes; ?>" href="<?php echo $group['link_url']; ?>">
-			<img src="<?php echo $group['image']; ?>"/>
+			<img src="<?php echo $img[0]; ?>" width="<?php echo $img[1]; ?>" height="<?php echo $img[2]; ?>"/>
 			<h4 class="link-block-inner__headline"><?php echo $group['headline']; ?></h4>
 			<p class="link-block-inner__subheadline"><?php echo $group['sub_headline']; ?></p>
 	</a>

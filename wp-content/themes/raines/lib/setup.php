@@ -111,6 +111,16 @@ function adds_new_image_sizes() {
 			'height' => 400,
 			'crop'   => true,
 		),
+		'article-list-image' => array(
+			'width'   => 450,
+			'height'  => 300,
+			'crop'    => true
+		),
+		'landing-link-image' => array(
+			'width'  => 900,
+			'height' => 600,
+			'crop'   => true
+		)
 	);
 
 	foreach( $config as $name => $args ) {

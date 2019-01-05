@@ -17,20 +17,32 @@ add_action('genesis_before_loop', __NAMESPACE__ . '\load_team_post', 1);
 
 function load_team_post() {
 	do_team_profile__hero();
-	?>
-	<div class="row row--padding team-member__flexbox">
-		<div class="first three-fourths">
-			<div class="inner-content">
-				<?php do_team_profile__content(); ?>
-			</div>
-		</div>
-		<div class="one-fourth">
-			<?php do_team_profile__sidebar(); ?>
-		</div>
-		<div class="clearfix"></div>
-	</div>
-	<?php
+	$categories = wp_get_post_categories( get_the_ID() );
+	if ( count( $categories ) > 0):
+        ?>
+        <div class="row row--padding team-member__flexbox">
+            <div class="first three-fourths">
+                <div class="inner-content">
+                    <?php do_team_profile__content(); ?>
+                </div>
+            </div>
+            <div class="one-fourth">
+                <?php do_team_profile__sidebar(); ?>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <?php
+    else:
+        ?>
+        <div class="row row--padding team-member__flexbox">
+            <div class="inner-content">
+                <?php do_team_profile__content(); ?>
+            </div>
+        </div>
+    <?php
+    endif;
 	do_team_profile__recent_articles();
+	intel_footer_cta();
 }
 
 function do_team_profile__hero() {
@@ -49,8 +61,10 @@ function do_team_profile__sidebar() {
 
 function do_team_profile__recent_articles() {
 	$content = get_field('team_member');
-	if ( count( $content['articles'] ) > 0 )
-	recent_articles($content, 'team-member');
+	if ( $content['display'] == 'yes' ) {
+		recent_articles($content, 'team-member');
+    }
+
 }
 
 // Run the Genesis loop.
