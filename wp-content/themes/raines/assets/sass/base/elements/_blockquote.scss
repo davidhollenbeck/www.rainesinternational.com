@@ -1,13 +1,19 @@
 blockquote {
   margin: 40px;
+  position:relative;
+  z-index:5;
 
-  &::before {
+  /*&::after {
     content: "\201C";
     display: block;
-    @include rem( font-size, $blockquote--font-size );
+    @include rem(font-size, 250px);
     height: 0;
-    left: -20px;
-    position: relative;
-    top: -10px;
-  }
+    left: -80px;
+    position: absolute;
+    top: -80px;
+    font-family: initial;
+    z-index:1;
+    opacity:.2;
+    color:$blue;
+  }*/
 }

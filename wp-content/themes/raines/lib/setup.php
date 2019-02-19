@@ -120,6 +120,16 @@ function adds_new_image_sizes() {
 			'width'  => 900,
 			'height' => 600,
 			'crop'   => true
+		),
+		'hero-link-image' => array(
+			'width'  => 2400,
+			'height' => 1600,
+			'crop'   => false
+		),
+		'profile-image' => array(
+			'width'  => 400,
+			'height' => 400,
+			'crop'   => true
 		)
 	);
 

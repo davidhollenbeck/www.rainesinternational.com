@@ -25,7 +25,6 @@ function team_profile__content($group) {
 }
 
 function team_profile__sidebar( $id ) {
-
 	$categories = wp_get_post_categories( $id );
 	?>
 		<div class="team-profile-expertise">

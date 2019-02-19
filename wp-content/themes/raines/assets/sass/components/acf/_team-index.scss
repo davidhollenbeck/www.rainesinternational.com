@@ -9,7 +9,6 @@
       &:hover {
         background-color:$gray--lighter;
 
-
         img, h3, h4 {
           transition:500ms all;
           transform: scale(.9);
@@ -94,3 +93,32 @@
   }
 }
 
+.row--profiles-interviews {
+  .team-profile-box {
+    img {
+      width:100%;
+    }
+
+    h4 {
+      margin-bottom:5px;
+    }
+
+    em {
+      display:block;
+      transition:500ms all;
+    }
+
+    margin-bottom:25px;
+
+    @media screen and (min-width:$screen-size--small--up) {
+      &:hover {
+        background-color:$gray--lighter;
+
+        img, h3, h4, em {
+          transition:500ms all;
+          transform: scale(.9);
+        }
+      }
+    }
+  }
+}

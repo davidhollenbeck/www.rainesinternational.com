@@ -31,6 +31,19 @@
     }
   }
 
+  &.slider--posts {
+    max-height:600px;
+
+    .slide__text-container, .slider__navigation {
+      width:100%;
+      left:0;
+    }
+
+    .slide__text-container {
+      background-color:rgba(0,0,0,0.47);
+    }
+  }
+
   .slide:not(.slide--0) {
     //display:none;
   }

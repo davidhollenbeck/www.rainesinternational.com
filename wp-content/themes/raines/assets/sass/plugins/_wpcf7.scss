@@ -46,3 +46,29 @@
     }
   }
 }
+
+.row--default-page-content {
+  p label {
+    color: #333;
+    font-family: "Lato", sans-serif;
+    @include rem(font-size, 18px);
+    font-weight: 400;
+    margin-top: 1em;
+
+    span {
+      input, textarea, input[type=tel] {
+        @include rem(font-size, 14px);
+        margin-top:.5em;
+        margin-bottom:1em;
+      }
+    }
+
+    span.your-email input.wpcf7-email {
+      @include rem(font-size, 14px);
+      margin-top:.5em;
+      height:auto;
+      margin-bottom:1em;
+    }
+  }
+}
+

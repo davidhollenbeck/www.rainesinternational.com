@@ -64,7 +64,13 @@ function do_team_profile__recent_articles() {
 	if ( $content['display'] == 'yes' ) {
 		recent_articles($content, 'team-member');
     }
+}
 
+function do_team_profile__ajax_setup() {
+	$content = get_field('team_member');
+	$args = array(
+		'post__in'       => $content['articles']
+    );
 }
 
 // Run the Genesis loop.

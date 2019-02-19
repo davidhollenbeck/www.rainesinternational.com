@@ -22,7 +22,6 @@ function load_inner_page() {
 	inner__do_hero();
 	?>
 
-
 	<div class="row row--padding inner-page__flexbox">
 		<?php if( get_field('spotlight')['display'] == 'yes' ||  get_field( 'spotlight')['profiles'] == 'yes' ): ?>
 		<div class="first one-fourth">
@@ -63,12 +62,12 @@ function inner__do_hero() {
 
 function inner__do_content() {
 	$content = get_field('inner_content');
-	inner_content($content);
+	inner_content( $content );
 }
 
 function inner__do_spotlight() {
 	$content = get_field('spotlight');
-	spotlight($content);
+	spotlight( $content );
 }
 
 function inner__do_recent_articles() {

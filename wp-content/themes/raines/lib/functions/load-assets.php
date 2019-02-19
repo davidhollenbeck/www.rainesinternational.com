@@ -32,6 +32,15 @@ function enqueue_assets() {
 
 	wp_enqueue_script( CHILD_TEXT_DOMAIN . '-drawer-lib', CHILD_URL . '/assets/js/jquery.multilevelpushmenu.min.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 	wp_enqueue_script( CHILD_TEXT_DOMAIN . '-drawer', CHILD_URL . '/assets/js/drawer.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_enqueue_script( 'ajax-pagination',  CHILD_URL . '/assets/js/pagination.js', array( 'jquery' ), '1.0', true );
+	wp_enqueue_script( 'profile',  CHILD_URL . '/assets/js/profile.js', array( 'jquery' ), '1.0', true );
+
+
+	global $wp_query;
+	wp_localize_script( 'ajax-pagination', 'ajaxpagination', array(
+		'ajaxurl' => admin_url( 'admin-ajax.php' ),
+		'query_vars' => json_encode( $wp_query->query )
+	));
 
 	$localized_script_args = array(
 		'mainMenu' => __( 'Menu', CHILD_TEXT_DOMAIN ),

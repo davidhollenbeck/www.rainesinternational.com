@@ -20,16 +20,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'wp_raines');
+define( 'DB_NAME', 'wp_raines' );
 
 /** MySQL database username */
-define('DB_USER', 'wp_raines');
+define( 'DB_USER', 'wp_raines' );
 
 /** MySQL database password */
-define('DB_PASSWORD', 'wp_raines');
+define( 'DB_PASSWORD', 'wp_raines' );
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define( 'DB_HOST', 'localhost' );
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
@@ -63,7 +63,7 @@ define('NONCE_SALT',       'TX]^#zqj2t]G]H_+Cto4&jrx@~UBDQUK[4A.r0wi=k|&IR>O_t4S
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'wp_';
+$table_prefix = 'wp_';
 
 /**
  * For raines: WordPress debugging mode.

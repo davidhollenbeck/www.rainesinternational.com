@@ -35,6 +35,16 @@ function load_team_profiles( $type = 'default' ) {
 		);
 	}
 
+	else if ( $type == 'featured_row' ) {
+		$args = array(
+			'posts_per_page'   => -1,
+			'orderby' => array( 'menu_order' => 'DESC', 'title' => 'ASC' ),
+			'order'            => 'ASC',
+			'cat' => '',
+			'post_type'        => 'team'
+		);
+    }
+
 
 
 	$the_query = new \WP_Query( $args );
@@ -48,33 +58,43 @@ function load_team_profiles( $type = 'default' ) {
             </div>
 		<?php endif;
 		if ( $type == 'sidebar'):
-            ?>
-                <h3 class="slider-title">Practice Leaders</h3>
-            <?php endif;
+			?>
+            <h3 class="slider-title">Practice Leaders</h3>
+		<?php endif;
 		while ( $the_query->have_posts() ):
-                $the_query->the_post();
-                $group = get_field( 'team_member', get_the_id() );
-            ?>
+			$the_query->the_post();
+			$group = get_field( 'team_member', get_the_id() );
+			?>
 
-			<?php if( $type == 'default'): ?>
+			<?php if ( $type == 'default' ): ?>
 
-			<a href="<?php echo get_permalink(); ?>" class="<?php if ( $i % 4 == 0 ){ echo 'first'; } ?> one-fourth team-profile-box">
-				<img src="<?php echo $group['bio_image']; ?>" class="bio-image" />
-				<h3><?php echo $group['headline']; ?></h3>
-				<h4><?php echo $group['position']; ?></h4>
+            <a href="<?php echo get_permalink(); ?>" class="<?php if ( $i % 4 == 0 ) {
+				echo 'first';
+			} ?> one-fourth team-profile-box">
+                <img src="<?php echo $group['bio_image']; ?>" class="bio-image"/>
+                <h3><?php echo $group['headline']; ?></h3>
+                <h4><?php echo $group['position']; ?></h4>
+            </a>
 
-			</a>
-
-            <?php elseif( $type == 'sidebar'): ?>
+            <?php elseif ( $type == 'sidebar' ): ?>
                 <a href="<?php echo get_permalink(); ?>" class="team-profile-box sidebar-slide">
-                    <img src="<?php echo $group['bio_image']; ?>" class="bio-image" />
+                    <img src="<?php echo $group['bio_image']; ?>" class="bio-image"/>
                     <h3><?php echo $group['headline']; ?></h3>
                     <h4><?php echo $group['position']; ?></h4>
-
                 </a>
-		    <?php endif; ?>
+
+            <?php elseif ( $type == 'featured_row'): ?>
+                <a href="<?php echo get_permalink(); ?>" class="<?php if ( $i % 4 == 0 ) {
+                    echo 'first';
+                } ?> one-fourth team-profile-box">
+                    <img src="<?php echo $group['bio_image']; ?>" class="bio-image"/>
+                    <h3><?php echo $group['headline']; ?></h3>
+                    <h4><?php echo $group['position']; ?></h4>
+                </a>
+            <?php endif; ?>
+
 			<?php
-			$i++;
+			$i ++;
 		endwhile;
 		/* Restore original Post Data */
 		wp_reset_postdata();

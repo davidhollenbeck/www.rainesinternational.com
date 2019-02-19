@@ -14,7 +14,7 @@ namespace Ucoast\Raines;
 
 function featured_article( $group ) {
 	?>
-		<div class="featured-article" style="background-image:url('<?php echo $group['image']; ?>');">
+		<div class="featured-article" style="background-image:url('<?php echo $group['image'] ?>');">
             <div class="featured-article__text-container">
                 <div class="wrap">
                     <h1 class="featured-article__headline"><?php echo $group['headline']; ?></h1>

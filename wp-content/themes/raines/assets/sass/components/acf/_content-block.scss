@@ -68,7 +68,7 @@
       left:50%;
       background-attachment: fixed;
       background-size: cover;
-      background-position:right;
+      background-position:bottom right;
 
     }
 
@@ -78,7 +78,7 @@
 
     .corner-overlay {
       background:$blue-gradient;
-      opacity:.66;
+      opacity:.3;
     }
 
     .content-block__inner {

@@ -35,5 +35,18 @@ function render_breadcrumbs($post_id, $type='default') {
         ?>
             <h4 class="breadcrumb"><a href="/about/team">Back To Team</a></h4>
         <?php
+        elseif ($post && $type == 'category'):
+        ?>
+            <h4 class="breadcrumb"><a href="/raines-intel/">Back To Raines Intel</a></h4>
+        <?php
+        elseif ($post && $type == 'article'):
+            ?>
+            <h4 class="breadcrumb"><a href="/raines-intel/">Back To Raines Intel</a></h4>
+        <?php
+        elseif ($post && $type == 'profile'):
+            ?>
+            <h4 class="breadcrumb"><a href="/intel-resources/profiles-and-interviews/">Back To Profiles & Interviews</a></h4>
+        <?php
+
     endif;
 }

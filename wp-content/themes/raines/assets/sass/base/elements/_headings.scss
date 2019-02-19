@@ -52,6 +52,13 @@ h6 {
   @include rem( font-size, 18px );
 }
 
+.border-headline {
+  padding-bottom: .5em;
+  border-bottom: 1px solid #89B7D7;
+  margin-bottom: .5em;
+  width:100%;
+}
+
 // Media Queries
 
 @media screen and (max-width:$screen-size--larger) {

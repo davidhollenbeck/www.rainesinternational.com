@@ -130,11 +130,14 @@ input:focus[type="submit"],
   color: $button--color;
 }
 
+.button.button--no-trans {
+  background:#fff !important;
+}
+
 .button.button--secondary {
   background:$button--secondary--background;
   border:1px solid #fff;
   color:$button--color;
-
 
   &:after {
     content: ' ';
@@ -147,6 +150,33 @@ input:focus[type="submit"],
     top: 19px;
     right: 24px;
     background-repeat: no-repeat;
+  }
+}
+
+.button.button--secondary:hover {
+  color:$button--color;
+}
+
+.button.button--black {
+  background-color:#333;
+  color:#fff;
+  border:1px solid #333;
+
+  &:after {
+    content: ' ';
+    background-image: url(assets/images/caret.png);
+    background-size: 70%;
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    position: absolute;
+    top: 19px;
+    right: 24px;
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    color:#fff;
   }
 }
 

@@ -80,6 +80,20 @@
         padding:40px 60px 0;
       }
 
+      &.article-headline {
+        padding:200px 60px 200px;
+      }
+
+      &.article-headline.contains-breadcrumb {
+        padding:140px 60px 100px;
+      }
+
+      &.headline-only {
+        h1 {
+          margin-bottom:1em;
+        }
+      }
+
       @include media( $breakpoint__screen-size--small ) {
         padding:80px 30px;
 

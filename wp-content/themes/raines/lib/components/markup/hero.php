@@ -14,6 +14,8 @@ namespace Ucoast\Raines;
 
 function hero($group, $type = 'default') {
 
+
+
     if ( $group['text_alignment'] == 'left') {
         $class = 'hero__text-container--left';
     }
@@ -28,29 +30,62 @@ function hero($group, $type = 'default') {
         $main_class = 'hero hero--team-member';
     }
 
+    elseif ( $type == 'ctrack' ) {
+        $main_class = 'hero hero--team-member';
+    }
+
     else {
         $main_class = 'hero';
     }
 
+    if ( $type != 'article' ) {
+	    $img = wp_get_attachment_image_src( $group['image'], 'hero-link-image' )[0];
+    }
+
+    else {
+        $img = get_the_post_thumbnail_url( null, 'hero-link-image' );
+    }
+
+
 	?>
-		<div class="<?php echo $main_class; ?>" style="background-image:url('<?php echo $group['image']; ?>'); background-position:<?php echo $group['image_position_horizontal'] . '% ' . $group['image_position_vertical'] . '%'; ?>">
+		<div class="<?php echo $main_class; ?>" style="background-image:url('<?php echo $img; ?>'); background-position:<?php echo $group['image_position_horizontal'] . '% ' . $group['image_position_vertical'] . '%'; ?>">
             <?php if ( $type == 'team-member' ): ?>
-                <img src="<?php echo $group['image']; ?>" class="team-member-mobile-image" />
+                <img src="<?php echo $img; ?>" class="team-member-mobile-image" />
             <?php endif; ?>
 
             <div class="overlay">
                 <div class="hero__text-container <?php echo $class; ?>">
-                    <div class="wrap <?php if ( $group['breadcrumbs'] == 'yes') { echo 'contains-breadcrumb'; } ?>">
+                    <div class="wrap <?php if ( $group['breadcrumbs'] == 'yes') { echo 'contains-breadcrumb '; } if ( $type == 'article'  ) { echo 'article-headline '; } elseif ( $group['sub_headline'] == null  ) { echo 'headline-only '; }  ?>">
                         <?php
-                            if ( $group['breadcrumbs'] == 'yes') {
-	                            render_breadcrumbs( get_the_id() );
-                            }
-
-                            elseif ( $type == 'team-member' ) {
+                            if ( $type == 'team-member' ) {
                                 render_breadcrumbs( get_the_id(), $type );
                             }
+
+                            elseif ( $type == 'category') {
+	                            render_breadcrumbs( get_the_id(), $type );
+                            }
+
+                            elseif( $type == 'article' ) {
+	                            render_breadcrumbs( get_the_id(), $type );
+                            }
+
+                            elseif( $type == 'profile') {
+	                            render_breadcrumbs( get_the_id(), $type );
+                            }
+
+                            elseif ( $group['breadcrumbs'] == 'yes' ) {
+                                render_breadcrumbs( get_the_id() );
+                            }
                         ?>
-                        <h1 class="hero__headline"><?php echo $group['headline']; ?></h1>
+
+                        <?php if ( $type != 'article' ): ?>
+                            <h1 class="hero__headline"><?php echo $group['headline']; ?></h1>
+
+                        <?php else: ?>
+                            <h1 class="hero__headline"><?php echo get_the_title(); ?></h1>
+
+                        <?php endif; ?>
+
 	                    <?php
 	                    if ( $group['position'] || $group['location']):
 		                    ?>

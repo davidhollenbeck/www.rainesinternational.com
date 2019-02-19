@@ -106,7 +106,7 @@ function _wp_menu_output( $menu, $submenu, $submenu_as_parent = true ) {
 
 		$class = $class ? ' class="' . join( ' ', $class ) . '"' : '';
 		$id = ! empty( $item[5] ) ? ' id="' . preg_replace( '|[^a-zA-Z0-9_:.]|', '-', $item[5] ) . '"' : '';
-		$img = $img_style = '';
+		$image_url = $img_style = '';
 		$img_class = ' dashicons-before';
 
 		if ( false !== strpos( $class, 'wp-menu-separator' ) ) {
