@@ -1,0 +1,72 @@
+/* ## Intel CSS
+--------------------------------------------- */
+
+.row--intel-header {
+  text-align: left;
+  background-color: #F8F8F8;
+  padding: 30px 60px;
+  margin-bottom: 60px;
+  max-width:100%;
+
+  h1 {
+    color:$black;
+    font-weight:400;
+    text-shadow:none;
+    margin-bottom:0;
+    max-width:1600px;
+    padding:0 60px;
+    margin-left:auto;
+  }
+
+  p {
+    font-family: "Lato", sans-serif;
+    @include rem(font-size, 22px);
+    line-height:1;
+    padding-bottom: 30px;
+    margin-bottom:50px;
+    border-bottom: 1px solid #89B7D7;
+
+    @include media( $breakpoint__screen-size--small ) {
+      @include rem(font-size, 16px);
+    }
+  }
+}
+
+
+.intel-page__flexbox {
+  .recent-articles--sidebar {
+    h2 {
+      display:none;
+    }
+  }
+
+  @media screen and (max-width: $screen-size--medium) {
+    .one-fourth, .three-fourths {
+      width:100%;
+      margin-left:0;
+    }
+
+    .one-fourth {
+      order:2;
+    }
+
+    .three-fourths {
+      order:1;
+    }
+  }
+
+  @include media( $breakpoint__screen-size--small ) {
+    padding-top:0;
+
+    &.row--padding {
+      padding: 30px 0;
+    }
+    .one-fourth {
+      padding: 60px 30px;
+    }
+
+    .link-block-inner {
+      padding:0 30px;
+    }
+  }
+}

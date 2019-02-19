@@ -1,0 +1,170 @@
+/* ## Consultant Track CSS
+--------------------------------------------- */
+
+.row--consultant-track-links {
+
+  h2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #89B7D7;
+    margin-bottom: .5em;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .link-block-inner {
+    text-align:center;
+  }
+
+  .link-block-inner__headline {
+    margin-top: 5px;
+    border-bottom: 1px solid #89B7D7;
+    padding-bottom: 10px;
+    text-align:center;
+    display:inline-block;
+    padding-left:10px;
+    padding-right:10px;
+  }
+
+  @include media( $breakpoint__screen-size--small ) {
+    display:block;
+
+    .link-block-inner {
+
+      margin-left:auto;
+      margin-right:auto;
+    }
+  }
+}
+
+.row--consultant-track-intro {
+
+  margin-top:50px;
+
+  @include media( $breakpoint__screen-size--small ) {
+    border:2px solid $blue;
+    padding:0;
+    margin:25px;
+  }
+
+  .entry-title {
+    display:none;
+  }
+
+  .entry {
+    margin-bottom:0;
+  }
+
+  .row--consultant-track-intro__content {
+    border:2px solid $blue;
+    padding:25px;
+    padding-right:125px;
+
+    @include media( $breakpoint__screen-size--small ) {
+      border:0;
+      padding-right:25px;
+    }
+  }
+
+  .row--consultant-track-intro__form {
+    margin-left:-2.564102564102564%;
+    padding-right:2.564102564102564%;
+    position:relative;
+
+    .login-password, .login-remember {
+      margin-bottom:.5em;
+    }
+
+    .form-container {
+      background-color:$gray--lightest;
+      padding:25px;
+      position:absolute;
+      height:calc(100% + 80px);
+      top:-40px;
+      left:0;
+      width:100%;
+      border:1px solid $black;
+
+      .form-container__inner {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &.logged-in {
+          text-align:center;
+
+          h5 {
+            margin-bottom:15px;
+            margin-top:15px;
+          }
+        }
+      }
+
+      input.button {
+        background-color: #3D749B;
+        color: #fff;
+        height: auto;
+        line-height: 1;
+        padding: 8px 10px;
+        border-radius: 2px;
+        text-align: center;
+        margin-bottom:5px;
+      }
+    }
+
+    h4 {
+      color: #333;
+      font-family: "Lato", sans-serif;
+      font-size: 22px;
+      font-weight: 400;
+      margin-top: 5px;
+      border-bottom: 1px solid #89B7D7;
+      padding-bottom: 10px;
+      text-align: center;
+      display: inline-block;
+    }
+
+    h6, h5 {
+      margin-bottom:5px;
+
+      a {
+        color:$blue;
+        text-decoration:none;
+      }
+    }
+
+    @include media( $breakpoint__screen-size--small ) {
+      margin-left:0;
+      padding-right:0;
+
+      .form-container {
+        border:0;
+        margin-left:0;
+        margin-right:0;
+        background-color:$white;
+        position:relative;
+        top:0;
+        height:100%;
+        padding-top:0;
+
+        .form-container__inner {
+          top:0;
+          transform:none;
+
+          &.logged-in {
+            text-align:left;
+          }
+        }
+      }
+    }
+  }
+
+  h2 {
+    margin-bottom:0;
+  }
+
+  p {
+    margin-bottom:1em;
+  }
+}

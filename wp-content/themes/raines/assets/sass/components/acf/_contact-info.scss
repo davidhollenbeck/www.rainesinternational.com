@@ -1,0 +1,21 @@
+/* ## Contact Info
+--------------------------------------------- */
+
+.sidebar-contact-info {
+
+  background-color:$gray--lightest;
+
+  h4 {
+    border-bottom:none !important;
+    padding-bottom:0 !important;
+  }
+
+  i.fa {
+    color:$blue;
+    margin-right:12px;
+  }
+
+  p {
+    margin-bottom:1em;
+  }
+}

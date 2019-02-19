@@ -1,0 +1,83 @@
+/* ## Generic Post CSS
+--------------------------------------------- */
+
+.single {
+  .entry-content {
+    p {
+      margin-bottom:1em;
+    }
+
+    a {
+      color:$blue;
+    }
+  }
+
+  .entry-header {
+    display:none;
+  }
+
+  .social-share {
+    padding-top:20px;
+    padding-bottom:0;
+  }
+
+  .fb-share-button span {
+    vertical-align: top !important;
+    margin-right:5px;
+  }
+
+  .entry {
+
+  }
+
+  .row--single-post-content {
+    padding-top:0;
+  }
+
+  .hero .hero__text-container .wrap h1 {
+    @include rem( font-size, 40px);
+  }
+
+  .row--single-post-content {
+    .three-fourths {
+      width: calc(74.35897435897436% - 60px);
+    }
+
+    .one-fourth {
+      width: calc(23.076923076923077% + 60px);
+
+      .recent-articles--sidebar {
+        padding:30px;
+        background-color:$gray--lightest;
+      }
+    }
+
+    #respond {
+      display:none;
+    }
+
+    @include media( $breakpoint__screen-size--large ) {
+      .three-fourths {
+        width: 100%;
+        margin-left:0;
+      }
+
+      .one-fourth {
+        width: 100%;
+        margin-left:0;
+      }
+
+      .entry {
+        margin-bottom:0;
+      }
+    }
+  }
+
+
+
+  @include media( $breakpoint__screen-size--small ) {
+    .hero .hero__text-container .wrap h1 {
+      @include rem( font-size, 30px);
+    }
+  }
+}

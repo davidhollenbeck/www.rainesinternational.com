@@ -1,0 +1,83 @@
+/* ## User Menu
+--------------------------------------------- */
+
+.logged-in {
+  .site-header {
+
+  }
+}
+
+.user-menu {
+  background: rgba(0,0,0,0.57);
+  color: #fff;
+  padding: 10px 30px;
+  text-align: right;
+  position: fixed;
+  right: 0;
+  z-index: 1;
+  top:81px;
+
+  a {
+    color:#fff;
+    @include rem(font-size, 16px);
+    font-weight: 700;
+    line-height: 1;
+    width: 100%;
+    font-family: "Lato", sans-serif;
+    margin: 0 10px;
+    text-decoration:none;
+    text-shadow:1px 1px rgba(0,0,0,0.3);
+  }
+
+  .user-menu--dropdown {
+    position:absolute;
+    top:44px;
+    right:0;
+    z-index:10;
+    display:none;
+
+    a {
+      padding:20px;
+      display:block;
+      color: #333;
+      text-align:left;
+      @include rem(font-size, 14px);
+      background-color:rgba(255, 255, 255, 0.75);
+      text-shadow:none;
+
+      &:hover {
+        background-color:rgba(255, 255, 255, 0.70);
+        color:$blue;
+      }
+    }
+  }
+
+  @include media( $breakpoint__screen-size--medium ) {
+    text-align:left;
+    padding: 10px 0;
+    padding-left:5%;
+    padding-right:5%;
+
+    a {
+      margin: 0 5px;
+    }
+  }
+
+  @media screen and (max-width:415px) {
+    display:none;
+  }
+}
+
+.page-template-page_intel {
+  .user-menu {
+    background: $blue-gradient;
+    color:#fff;
+    padding:10px 30px;
+    text-align:right;
+    position:relative;
+  }
+}
+
+.admin-bar .user-menu {
+  top:113px;
+}

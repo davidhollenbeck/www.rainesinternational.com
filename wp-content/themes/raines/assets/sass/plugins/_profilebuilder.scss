@@ -1,0 +1,145 @@
+/* ## Profile Builder
+--------------------------------------------- */
+
+.row--listings {
+  display:block;
+}
+
+.wppb-phone span.wppb-description-delimiter {
+  display:none;
+}
+
+.wppb-default-password {
+  span.wppb-description-delimiter {
+    display:none;
+  }
+
+  #pass-strength-result {
+    display:none !important;
+  }
+}
+
+.wppb-upload {
+  label {
+    display:none;
+  }
+}
+
+label[for='us_auth'] {
+  display:none;
+}
+
+.form-submit {
+  #register, #edit_profile {
+    display:none;
+  }
+}
+
+.row--user-details {
+  display:flex;
+
+  .row--user-details__form {
+    width:100%;
+
+    form {
+      max-width:1200px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+  }
+
+  .row--user-details__info {
+
+  }
+
+  label {
+     margin-bottom:5px;
+     font-weight:400;
+     display:block;
+  }
+
+  label[for=send_credentials_via_email] {
+    margin-top:10px;
+
+    input[type=checkbox] {
+      margin-right:10px;
+    }
+  }
+
+  .wppb-checkbox label {
+    display:inline;
+    margin-bottom:0;
+  }
+
+  h4 {
+    font-family: "Lato", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #89B7D7;
+    margin-bottom: 1em;
+    margin-top: .5em;
+  }
+
+  .wppb-form-field {
+    margin-bottom:15px;
+  }
+
+  .custom_field_checkbox {
+    margin-right:10px;
+  }
+
+  input[type="button"].wppb-msf-button, input[type="button"].wppb-msf-pagination, input[type="button"].wppb-msf-tabs {
+    background-color:#797979;
+    text-align:center;
+
+    &:hover, &:focus {
+      background-color:$blue;
+    }
+  }
+
+  input[type="button"].wppb-msf-tabs {
+    text-align:center;
+
+    &.wppb-msf-active, &:hover, &:focus {
+      background-color:$blue;
+    }
+  }
+
+  input[type="button"].wppb-msf-pagination:disabled, input[type="button"].wppb-msf-pagination:hover:disabled, input[type="button"].wppb-msf-tabs:disabled, input[type="button"].wppb-msf-tabs:hover:disabled {
+    background-color:$gray--light;
+  }
+
+  input[type="button"].wppb-msf-button:disabled, input[type="button"].wppb-msf-button:hover:disabled, input[type="button"].wppb-msf-pagination:disabled, input[type="button"].wppb-msf-pagination:hover:disabled, input[type="button"].wppb-msf-tabs:disabled, input[type="button"].wppb-msf-tabs:hover:disabled {
+    background-color:$gray--light;
+  }
+
+  .wppb-select2 span.select2-container, .wppb-select2-multiple span.select2-container {
+    max-width:250px;
+  }
+
+  .wppb_upload_button {
+    background:transparent;
+
+    @include rem(font-size, 16px);
+    padding:15px 48px 15px 24px;
+    line-height:1;
+    border: 1px solid #3D749B !important;
+    color: #3D749B;
+    cursor: pointer;
+
+    &:hover, &:focus {
+      color:$blue;
+    }
+  }
+
+  .wppb-msf-step-commands {
+    padding-top: 25px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    margin-top: 25px;
+  }
+
+  #wppb_register_pre_form_message {
+    display:none;
+  }
+}
